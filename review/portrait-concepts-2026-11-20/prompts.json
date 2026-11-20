@@ -1,0 +1,43 @@
+{
+  "status": "Completed: four concept PNGs generated and visually reviewed; comparison.jpg assembled. No homepage changes.",
+  "model": "gpt-image-2.5-flare",
+  "shared": "Create an original handsome, stylish young adult male game-character interpretation of the person in the reference photos. The user explicitly welcomes idealization and creative redesign rather than exact portrait likeness. Use black textured hair, dark eyes, and optional redesigned glasses as personal anchors. Refine facial structure, confident expression and fashion silhouette. Redesign the pose completely; no selfie arm, phone or copied photo background. Professional character key art for a personal homepage. Keep the character fully readable, hands anatomically sound, and do not crop the top of the hair. No text, logo, watermark or UI. One character per image. These are alternative directions, not a finalized identity.",
+  "concepts": [
+    {
+      "id": "01-graphic-protagonist",
+      "title": "利落漫画主角",
+      "references": [
+        "private-inputs/outdoor-photo.jpg",
+        "private-inputs/portrait-photo.jpg"
+      ],
+      "prompt": "Graphic Japanese urban RPG key art, angular confident ink contours, expressive flat cel shading and sharply designed negative space. Three-quarter upper-thigh portrait, body turned, looking toward viewer with a subtle knowing smile. Slim angular black glasses, windswept layered black hair. Cropped deep cobalt jacket with golden inner stand collar over an ivory shirt, tailored relaxed trousers; one hand casually tucked into pocket. Strong diagonals, elegant long proportions. Cobalt, wheat gold, ivory and near-black palette. Minimal ivory backdrop with a single cobalt diagonal graphic and a few gold marks. Crisp sophisticated illustration, playful confidence, no photorealism."
+    },
+    {
+      "id": "02-street-fashion",
+      "title": "街头潮流玩家",
+      "references": [
+        "private-inputs/outdoor-photo.jpg",
+        "private-inputs/portrait-photo.jpg"
+      ],
+      "prompt": "Contemporary street-fashion action-game character illustration with exaggerated clothing volume, chunky expressive linework, screenprint texture and sculptural cel shading. Upper-thigh portrait with an easy leaning stance, head slightly tilted, warm mischievous grin. Oversized cobalt bomber, white layered tee, charcoal baggy trousers, asymmetrical crossbody pouch, headphones resting around the neck. Lightly tinted amber fashion glasses that leave the eyes visible. Black hair with a graphic side sweep. Cobalt and sunny yellow with small coral accents. Clean warm grey background with sparse abstract graffiti gestures, no lettering. Visibly different from formal anime key art: loose, tactile, energetic and fashionable."
+    },
+    {
+      "id": "03-pixel-adventurer",
+      "title": "复古像素冒险者",
+      "references": [
+        "private-inputs/outdoor-photo.jpg",
+        "private-inputs/portrait-photo.jpg"
+      ],
+      "prompt": "Handcrafted high-quality pixel-art indie adventure game promotional portrait, constructed from deliberate square pixel clusters and a limited approximately 24-color palette, crisp nearest-neighbor-style edges. Do not apply a mosaic filter to a photograph. A handsome black-haired young man with small black glasses, a cobalt travel jacket with a flowing golden lining, ivory tee and a compact shoulder bag. Waist-up three-quarter view, looking into the distance with relaxed confidence. Blue sky and a few geometric golden wheat silhouettes, large calm negative space, luminous late-afternoon atmosphere. Distinct hair clumps, expressive readable eyes and stylish angular silhouette despite limited pixels. No smooth digital-painting contours, no realistic photographic texture."
+    },
+    {
+      "id": "04-white-snake-editorial",
+      "title": "白蛇时装角色",
+      "references": [
+        "private-inputs/held-snake-photo.jpg",
+        "private-inputs/portrait-photo.jpg"
+      ],
+      "prompt": "High-fashion illustrated game character poster, sophisticated editorial gouache and dry-brush texture, elegant restrained shapes, cool magnetic expression. Upper-thigh portrait of a handsome young man with artfully tousled black hair, eyes unobstructed, no glasses in this variation. Long fluid midnight-blue jacket over a black top, subtle silver fastenings. He gently supports an ivory-white snake across both forearms, loosely referencing the real held-snake pose; show the snake as a calm animal with a coherent single body, one head and one tail. Strong sweeping S-shaped composition between snake and clothing. Warm ivory background, cobalt shadow shapes and a narrow gold rim light. Fashion magazine attitude, polished painterly stylization, no armor, no magical effects."
+    }
+  ]
+}

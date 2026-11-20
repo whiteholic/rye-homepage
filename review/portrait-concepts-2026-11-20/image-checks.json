@@ -1,0 +1,41 @@
+{
+  "model": "gpt-image-2.5-flare",
+  "images": [
+    {
+      "id": "01-graphic-protagonist",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "bytes": 1922432
+    },
+    {
+      "id": "02-street-fashion",
+      "size": [
+        1087,
+        1447
+      ],
+      "mode": "RGB",
+      "bytes": 2716874
+    },
+    {
+      "id": "03-pixel-adventurer",
+      "size": [
+        1312,
+        1199
+      ],
+      "mode": "RGB",
+      "bytes": 1776175
+    },
+    {
+      "id": "04-white-snake-editorial",
+      "size": [
+        1087,
+        1447
+      ],
+      "mode": "RGB",
+      "bytes": 2820748
+    }
+  ]
+}

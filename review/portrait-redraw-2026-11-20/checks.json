@@ -1,0 +1,32 @@
+{
+  "model": "gpt-image-2.5-flare",
+  "images": [
+    {
+      "label": "原照片",
+      "size": [
+        1280,
+        1706
+      ],
+      "mode": "RGB",
+      "bytes": 103911
+    },
+    {
+      "label": "P5 式漫画重绘",
+      "size": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "bytes": 1960943
+    },
+    {
+      "label": "像素画重绘",
+      "size": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "bytes": 1608593
+    }
+  ]
+}
