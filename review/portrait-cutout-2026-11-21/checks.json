@@ -1,0 +1,16 @@
+{
+  "size": [
+    1280,
+    1706
+  ],
+  "mode": "RGBA",
+  "alpha_range": [
+    0,
+    255
+  ],
+  "transparent_pixels": 851868,
+  "opaque_pixels": 1298520,
+  "source_unchanged": true,
+  "rgb_preserved": true,
+  "method": "local U2Net human segmentation; source RGB preserved"
+}

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#183dcb" />
+  <title>Rye · 坡上麦田 — 第二版设计预览</title>
+  <meta name="description" content="我是李佳润，Rye，一名游戏策划。这里记录我的入行经历、行动与思考，以及喜欢的故事和音乐。认识彼此，一起变得更好。" />
+  <link rel="stylesheet" href="css/style.css?v=interests-1" />
+  <link rel="stylesheet" href="css/open-sky.css?v=reading-2" />
+  <script src="js/main.js?v=interests-1" defer></script>
+</head>
+<body class="open-sky">
+  <div class="sky-scene" aria-hidden="true">
+    <div class="sky-light"></div>
+    <svg class="wind-lines" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice"><path d="M-100 300Q260 200 700 50M-100 323Q260 228 700 70M790 105Q1100 40 1520 85M1040 640Q1300 520 1600 505" /></svg>
+    <div class="far-hill"></div>
+    <div class="near-hill"></div>
+    <svg class="wheat-field" viewBox="0 0 1440 370" preserveAspectRatio="xMidYMax slice">
+      <defs>
+        <g id="grain">
+          <path class="stem" d="M0 168Q10 82 27 8M19 50L4 15M23 35L40 2M14 75L-2 40M19 58L39 23M9 99L-8 64M13 82L35 49" />
+          <path d="M25 24Q13 8 30-8Q43 9 25 24M21 43Q-4 35 1 15Q24 20 21 43M22 44Q45 45 49 23Q27 24 22 44M16 67Q-10 58-5 37Q19 44 16 67M17 68Q40 70 47 48Q23 46 17 68M11 92Q-16 81-11 60Q13 67 11 92M12 93Q36 95 42 73Q19 71 12 93M6 116Q-21 105-17 84Q9 91 6 116M7 117Q30 120 37 97Q14 94 7 117" />
+        </g>
+      </defs>
+      <g class="distant-grains">
+        <use href="#grain" transform="translate(30 252) scale(.38) rotate(-12)"/><use href="#grain" transform="translate(91 242) scale(.42) rotate(-8)"/><use href="#grain" transform="translate(157 225) scale(.4) rotate(-5)"/><use href="#grain" transform="translate(212 215) scale(.44) rotate(4)"/><use href="#grain" transform="translate(270 204) scale(.4) rotate(-8)"/><use href="#grain" transform="translate(327 192) scale(.45) rotate(4)"/><use href="#grain" transform="translate(383 180) scale(.4) rotate(-12)"/><use href="#grain" transform="translate(446 168) scale(.42) rotate(-7)"/><use href="#grain" transform="translate(508 154) scale(.42) rotate(6)"/><use href="#grain" transform="translate(565 141) scale(.4) rotate(-6)"/><use href="#grain" transform="translate(622 128) scale(.42) rotate(-5)"/><use href="#grain" transform="translate(680 117) scale(.45) rotate(4)"/><use href="#grain" transform="translate(739 103) scale(.4) rotate(-8)"/><use href="#grain" transform="translate(798 92) scale(.4) rotate(3)"/><use href="#grain" transform="translate(859 81) scale(.4) rotate(-10)"/><use href="#grain" transform="translate(923 72) scale(.44) rotate(-5)"/><use href="#grain" transform="translate(985 60) scale(.4) rotate(5)"/><use href="#grain" transform="translate(1047 51) scale(.44) rotate(-8)"/><use href="#grain" transform="translate(1110 41) scale(.4) rotate(-3)"/><use href="#grain" transform="translate(1170 34) scale(.44) rotate(3)"/><use href="#grain" transform="translate(1234 28) scale(.4) rotate(-5)"/><use href="#grain" transform="translate(1297 22) scale(.45) rotate(-9)"/><use href="#grain" transform="translate(1358 18) scale(.4) rotate(3)"/><use href="#grain" transform="translate(1416 13) scale(.45) rotate(-4)"/>
+      </g>
+      <g class="foreground-grains"><use href="#grain" transform="translate(8 217) scale(1.2) rotate(-15)"/><use href="#grain" transform="translate(68 247) scale(1.05) rotate(8)"/><use href="#grain" transform="translate(145 223) scale(1.25) rotate(-10)"/><use href="#grain" transform="translate(210 250) scale(.9) rotate(2)"/><use href="#grain" transform="translate(1190 250) scale(1.3) rotate(8)"/><use href="#grain" transform="translate(1280 205) scale(1.3) rotate(-6)"/><use href="#grain" transform="translate(1375 160) scale(1.55) rotate(-2)"/></g>
+      <g class="field-lines"><path d="M180 370Q510 240 1440 165M415 370Q880 215 1440 200M790 370Q1180 257 1440 255"/></g>
+    </svg>
+  </div>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="#about" aria-label="Rye，返回首页">r<span class="brand-y">y</span>e<span class="brand-star" aria-hidden="true">✳</span></a>
+      <nav class="navigation" aria-label="主要导航">
+        <a href="#about" class="nav-link is-active" aria-current="page"><span>01</span>关于我</a>
+        <a href="#action" class="nav-link"><span>02</span>行动与思考</a>
+        <a href="#life" class="nav-link"><span>03</span>兴趣</a>
+        <a href="#music" class="nav-link"><span>04</span>音乐大厅</a>
+        <a href="#shares" class="nav-link"><span>05</span>工具和项目</a>
+      </nav>
+      <span class="header-note">不止一种可能<br />A LITTLE WORLD BY RYE</span>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <section class="panel home-panel is-active" id="about" aria-labelledby="home-title">
+        <div class="identity">
+          <div class="identity-top"><span>HELLO, WORLD.</span><span>保持好奇 / 继续探索</span></div>
+          <div class="rye-wordmark" aria-hidden="true">RYE</div>
+          <svg class="wheat-art" viewBox="0 0 460 400" fill="none" aria-hidden="true">
+            <circle cx="263" cy="203" r="145" stroke="currentColor" stroke-width="1" />
+            <circle cx="263" cy="203" r="126" stroke="currentColor" stroke-width="1" stroke-dasharray="2 8" />
+            <path d="M79 385C180 304 253 185 312 43M146 400C222 316 296 249 399 205" stroke="currentColor" stroke-width="4" />
+            <g fill="currentColor">
+              <path d="M296 83Q269 45 299 8Q326 48 296 83ZM282 113Q236 99 242 55Q288 71 282 113ZM281 115Q325 116 345 74Q302 72 281 115ZM264 151Q219 136 222 95Q268 109 264 151ZM264 151Q309 155 332 113Q289 111 264 151ZM245 190Q199 176 200 134Q248 147 245 190ZM245 190Q289 196 316 155Q270 151 245 190ZM221 230Q176 213 177 171Q224 186 221 230ZM221 230Q265 239 295 198Q249 192 221 230ZM196 267Q151 251 148 209Q196 224 196 267ZM196 267Q240 279 271 239Q225 232 196 267ZM369 225Q373 188 415 180Q412 220 369 225ZM339 245Q335 205 371 186Q379 226 339 245ZM337 248Q368 275 402 251Q373 222 337 248ZM305 273Q300 234 331 213Q343 254 305 273ZM302 276Q332 306 368 284Q337 252 302 276ZM271 303Q260 264 288 240Q306 278 271 303ZM269 306Q298 337 334 318Q306 285 269 306Z" />
+            </g>
+            <path d="M42 178h31m-15-15v30M385 68h24m-12-12v24M362 345h35m-17-17v34" stroke="currentColor" stroke-width="2" />
+          </svg>
+          <div class="name-block">
+            <p class="identity-kicker">在这里，认识一个具体的人。</p>
+            <div class="name-line"><h1 id="home-title">李佳润<span>Rye.</span></h1><span class="occupation">游戏策划<span>GAME PLANNER</span></span></div>
+            <p class="purpose">认识彼此，<br />一起变得更好<span class="period">。</span></p>
+            <p class="purpose-en">LET’S MEET. LET’S GROW.</p>
+          </div>
+          <div class="identity-bottom"><a href="#stories">从一段故事开始 <span aria-hidden="true">↘</span></a><span>SCROLL TO EXPLORE</span></div>
+          <svg class="mobile-field" viewBox="0 0 390 174" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 75Q180 25 390 0V174H0Z" fill="#f6dd8e"/>
+            <path d="M0 103Q185 48 390 28V174H0Z" fill="#e9b83f"/>
+            <g fill="#ffe49a" color="#ffe49a">
+              <use href="#grain" transform="translate(20 98) scale(.23)"/><use href="#grain" transform="translate(61 83) scale(.25)"/><use href="#grain" transform="translate(105 72) scale(.22)"/><use href="#grain" transform="translate(147 61) scale(.25)"/><use href="#grain" transform="translate(190 50) scale(.22)"/><use href="#grain" transform="translate(232 40) scale(.25)"/><use href="#grain" transform="translate(275 31) scale(.23)"/><use href="#grain" transform="translate(318 22) scale(.25)"/><use href="#grain" transform="translate(360 16) scale(.22)"/>
+            </g>
+            <g fill="none" stroke="#fff0b4" opacity=".4"><path d="M0 153Q190 95 390 80M80 174Q230 126 390 112"/></g>
+          </svg>
+        </div>
+
+        <div class="home-stories" id="stories">
+          <div class="section-overline"><span>一些关于我的事</span><span>GET TO KNOW ME ↙</span></div>
+          <article class="intro-row">
+            <div class="intro-number" aria-hidden="true">01<span>START</span></div>
+            <div class="intro-copy">
+              <h2>开始走自己的路</h2>
+              <p>双非本科，读着并不热衷的软件工程，也担心未来的工作会被 AI 替代。后来，我开始改变<a class="keyword" href="#action/cognition">认知<span aria-hidden="true">↗</span></a>和<a class="keyword" href="#action/environment">环境<span aria-hidden="true">↗</span></a>，朝游戏策划的方向行动，拿到了实习机会，如今已经转正。</p>
+            </div>
+          </article>
+          <article class="intro-row">
+            <div class="intro-number" aria-hidden="true">02<span>EXPLORE</span></div>
+            <div class="intro-copy">
+              <h2>重新认识自己<small>Know Yourself</small></h2>
+              <p>我是真的不喜欢，还是还没试过？为了重新找回幸福感，我开始走出去，认识不同的人，也重新探索自己想住的<a class="keyword" href="#action/home">房子<span aria-hidden="true">↗</span></a>、想做的<a class="keyword" href="#action/work">工作<span aria-hidden="true">↗</span></a>和期待的<a class="keyword" href="#action/relationship">恋爱关系<span aria-hidden="true">↗</span></a>。有些答案，我想在生活里慢慢找到。</p>
+            </div>
+          </article>
+          <article class="intro-row">
+            <div class="intro-number" aria-hidden="true">03<span>CONNECT</span></div>
+            <div class="intro-copy">
+              <h2>也想和你聊聊喜欢的作品</h2>
+              <p>电影、番剧、音乐、游戏和书，占据了我不少空闲时间。如果你也喜欢其中的某部作品，我们或许就有了聊天的开场。</p>
+              <div class="text-links"><a href="#life">看看我的兴趣 <span aria-hidden="true">↗</span></a><a href="#music">去音乐大厅 <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+          <div class="stories-bottom"><span class="tiny-star" aria-hidden="true">✳</span><p>宝藏在迷雾中，拥抱不确定性。</p><span aria-hidden="true">↗</span></div>
+        </div>
+      </section>
+
+      <section class="panel reading-panel" id="action" aria-labelledby="action-title" hidden>
+        <div class="page-heading" data-action-heading><p class="eyebrow">02 / KNOW YOURSELF</p><h1 id="action-title" tabindex="-1">行动与思考<span>↗</span></h1><p>认识自己的过程。</p></div>
+        <nav class="topic-directory" aria-label="选择阅读主题">
+          <a href="#action/cognition"><span class="topic-number">01</span><span><strong>认知</strong><span>几个容易听懂，却不容易内化的想法</span></span><span aria-hidden="true">↗</span></a>
+          <a href="#action/environment"><span class="topic-number">02</span><span><strong>环境</strong><span>过去的自己，也和过去的环境有关</span></span><span aria-hidden="true">↗</span></a>
+          <a href="#action/home"><span class="topic-number">03</span><span><strong>房子</strong><span>想住在什么样的地方</span></span><span aria-hidden="true">↗</span></a>
+          <a href="#action/work"><span class="topic-number">04</span><span><strong>工作</strong><span>游戏策划、做家教</span></span><span aria-hidden="true">↗</span></a>
+          <a href="#action/relationship"><span class="topic-number">05</span><span><strong>恋爱关系</strong><span>想法与改变</span></span><span aria-hidden="true">↗</span></a>
+        </nav>
+        <div class="article-toolbar" hidden>
+          <p class="article-path"><span class="know-yourself">KNOW YOURSELF</span>行动与思考 / <span data-topic-name></span></p>
+          <nav aria-label="文章返回"><a href="#about" data-reading-return hidden>↙ 返回刚才的位置</a><a href="#action">浏览全部主题 ↗</a></nav>
+        </div>
+        <div class="reading-layout">
+          <aside class="reading-index chapter-index" aria-label="认知小节"><span>本篇目录 / 5 节</span><a href="#action/cognition/uncertainty">01 拥抱不确定性</a><a href="#action/cognition/growth">02 成长型思维</a><a href="#action/cognition/agency">03 主体思维</a><a href="#action/cognition/action">04 行动引领思考</a><a href="#action/cognition/learning">05 向有成果的人学习</a></aside>
+          <div class="reading-content">
+            <article class="note-entry" id="cognition" tabindex="-1">
+              <span class="note-index">01 / 认知</span>
+              <h2>几个容易听懂，却不容易内化的想法</h2>
+              <p>大三的时候，开始走此前没准备过的游戏策划路线。看了课代表立正不少视频和课程，其中几个想法对当时的我起了作用：拥抱不确定性、成长型思维、主体思维、行动引领思考。</p>
+              <p>这些东西很容易听懂，但碰到自己的事，还是不容易用上。</p>
+              <section class="note-subsection" id="cognition-uncertainty" tabindex="-1" aria-labelledby="cognition-uncertainty-title">
+                <h3 id="cognition-uncertainty-title">拥抱不确定性：宝藏在迷雾中</h3>
+                <p>学生时代，考什么、学什么，大多有人告诉我们。从中小学开始，一直在考试中获得成绩，好像只要埋头读书就可以了。习惯了有考题、有范围，也有比较明确的评价。</p>
+                <p>但到了社会，没有人会给你出考题，得自己去找。想做什么、往哪走，也没有一个标准答案。</p>
+                <p>宝藏在迷雾中。有些机会，开始尝试以后才看得见。读《伟大为什么不能被计划》时，里面关于计划的讨论，也让我重新想了想这件事。</p>
+                <p>就拿这个网站来说。没做过并上线过网站，不知道能不能用 AI 做出符合我品味的动画和交互，也不知道最后能带来什么确定的东西。或许大家根本不想认识我，或许我的经验无法帮助任何人。有一万个理由否定做个人网站的想法。</p>
+                <p>网站就是在这些问题还没有答案的时候，开始做的。</p>
+              </section>
+              <section class="note-subsection" id="cognition-growth" tabindex="-1" aria-labelledby="cognition-growth-title">
+                <h3 id="cognition-growth-title">成长型思维：现在不会，还可以学</h3>
+                <p>当时不清楚游戏策划要做什么，只有不到一年就要实习了，换方向怎么看都有点晚。如果觉得能力就这样了，学不了多少东西，那这条路根本不会去走。</p>
+                <p>《刻意练习》让我关注到，学习也有方法。不会的东西，可以拆开练，可以找反馈，再改。现在做不到和以后学不会，中间还隔着一个学习的过程。</p>
+                <p>关注付出，也关注这次到底学到了什么。一次结果不好，可能有很多原因，至少不用立刻变成“我就是不行”。练了没变化，也得看看方法有没有问题。</p>
+                <p>遇到挑战时，注意力能放到能学到什么上面，很多事情才有继续尝试的空间。</p>
+              </section>
+              <section class="note-subsection" id="cognition-agency" tabindex="-1" aria-labelledby="cognition-agency-title">
+                <h3 id="cognition-agency-title">主体思维：选择还是得自己来做</h3>
+                <p>老师讲过十几年前计算机专业的就业机会，再看现在，已经是另一回事。环境会变，选了一个当时看起来不错的专业，也保证不了以后的路。</p>
+                <p>环境不好会影响机会，这个影响确实存在。但如果一直停在抱怨上，等社会环境变好，自己能做的事也就一直没做。</p>
+                <p>以前想做什么，学校、家长都会告诉我们该怎么选。习惯了听安排，后来连需要自己判断的东西，也一起交出去了。</p>
+                <p>可最后，做这份工作、过这种生活的，还是自己。建议可以听，选择还是得自己来做。</p>
+                <p>大三转向游戏策划，就是开始走自己的路。和周围一些人的方向不一样，当时也没法证明这一定是个好选择。</p>
+              </section>
+              <section class="note-subsection" id="cognition-action" tabindex="-1" aria-labelledby="cognition-action-title">
+                <h3 id="cognition-action-title">行动引领思考：有些东西，做了才知道</h3>
+                <p>网站最后能做成什么样，大家会不会喜欢，光想很难有答案。代码能呈现什么效果，AI 能帮到什么程度，也得实际用起来才能了解。</p>
+                <p>有了能看的版本，喜欢哪里、不喜欢哪里，才有具体的东西可以讨论。想法也会跟着变，原来没想到的问题会冒出来。</p>
+                <p>很多思考需要这些实际接触到的东西。一直没开始，就只能围着原来的想象打转。</p>
+              </section>
+              <section class="note-subsection" id="cognition-learning" tabindex="-1" aria-labelledby="cognition-learning-title">
+                <h3 id="cognition-learning-title">想获得想要的成果，就去找已经获得成果的人学习</h3>
+                <p>有些东西，不用全靠自己从头摸索。已经有人走过这条路，做出过成果，可以看看他们具体做了什么，哪些地方值得学。</p>
+                <p>只看结果，很容易觉得对方厉害、自己做不到。再往前看一点，才有可能看到那些能学的东西。</p>
+                <p>当然，起点、条件、时机都可能不一样。能学到做法，不代表能复制结果。</p>
+              </section>
+              <p>最后打个预防针，事物是很多维的，这里只摘了一部分对我比较重要的东西。也还在慢慢内化，有想讨论的可以联系我。</p>
+            </article>
+            <article class="note-entry" id="environment" tabindex="-1">
+              <span class="note-index">02 / 环境</span><h2>过去的自己，也和过去的环境有关</h2>
+              <section class="note-subsection" id="environment-scope" tabindex="-1" aria-labelledby="environment-scope-title">
+                <h3 id="environment-scope-title">环境包括什么</h3>
+                <p>环境可以是物理的。身边放着一大袋零食，就会想吃；房间太乱，就会心烦。</p>
+                <p>也可以是一本书。读过《刻意练习》，会更相信人可以成长。</p>
+                <p>也可以是身边和网络上的人。室友考研，自己也更可能考研；室友喜欢游戏，自己也更可能喜欢游戏。朋友会乐器，会想学；朋友会跳舞，也会想试试。</p>
+              </section>
+              <section class="note-subsection" id="environment-experience" tabindex="-1" aria-labelledby="environment-experience-title">
+                <h3 id="environment-experience-title">没做过，不一定是不喜欢</h3>
+                <p>钱不够的时候，付费社交、穿搭、自我投资，很多事可能根本不在考虑范围里。时间、机会、身边有没有人一起，也都影响能接触到什么。</p>
+                <p>没尝试过，和尝试以后发现不喜欢，是两回事。以前觉得自己不需要、不在意的东西，也可能只是当时没有条件接触。</p>
+                <p>环境不仅影响能做什么，也影响拿什么经历来认识自己。</p>
+              </section>
+              <section class="note-subsection" id="environment-people" tabindex="-1" aria-labelledby="environment-people-title">
+                <h3 id="environment-people-title">换一群人，能看见不同的路</h3>
+                <p>大学时，周围有准备考公考研的同学，也看到了已经获得游戏实习的同学。游戏行业原来已经有人进去了，这条路就在身边。</p>
+                <p>后来减少了和方向不同的同学的接触，开始走自己的路。接触什么人、看到什么信息，会影响觉得什么事情是可能的。</p>
+                <p>环境还会影响表现出来的样子。在熟悉的人面前话很多，在陌生人面前沉默，可能和安全感、有没有共同话题有关。换一群人，表现也可能不一样。</p>
+                <p>过去的行为发生在过去的环境里，不能只凭这些就把自己定死。</p>
+              </section>
+              <section class="note-subsection" id="environment-performance" tabindex="-1" aria-labelledby="environment-performance-title">
+                <h3 id="environment-performance-title">一次表现，说明不了全部</h3>
+                <p>在一个团队里做得不好，可能有能力和经验的问题，也可能和任务、协作方式、资源有关。换个环境不一定全解决，留下来继续努力也不一定都能解决。</p>
+                <p>工作里具体哪件事不会做，什么地方没沟通好，哪些条件一直缺着，得分开看。直接归成“我能力不行”，或者全归成“环境太差”，很多东西就看不见了。</p>
+                <p>提升自己和寻找合适的环境，可以同时考虑。不用先把当前环境里的所有问题都解决，才有资格想别的可能。</p>
+              </section>
+              <section class="note-subsection" id="environment-social" tabindex="-1" aria-labelledby="environment-social-title">
+                <h3 id="environment-social-title">最近的社交尝试</h3>
+                <p>想要什么，选择或改变环境很重要。</p>
+                <p>我不擅长社交，所以现在开始更多地展示自己，参加活动。</p>
+                <p>这四个月，除了一个人探店、观展，还参加了三次陌生人聚餐、多次桌游、两次徒步爬山，跟别人去了一次动物园，试了一次简单的 cos。只用周末，就做了不少以前没试过的事。</p>
+                <p>做这个网站，也是想让更多人认识我，认识些学校和工作以外的人。</p>
+              </section>
+            </article>
+            <article class="note-entry" id="home" tabindex="-1">
+              <span class="note-index">03 / 房子</span><h2>想住在什么样的地方</h2>
+              <p>住过这些地方，现在比较在意阳光、卫生和自己的空间。但一个人住久了，也会想有人陪。</p>
+              <section class="note-subsection" id="home-childhood" tabindex="-1" aria-labelledby="home-childhood-title">
+                <h3 id="home-childhood-title">小时候的平房</h3>
+                <p>小时候住在很大的平房里，爷爷奶奶也一起住。外面有菜园，远一点有池塘和玩耍的地方，邻居家的几个孩子可以一起玩。</p>
+                <p>活动空间大，也自由，还能养猫。家里人挤在一起，但很温馨。</p>
+              </section>
+              <section class="note-subsection" id="home-family" tabindex="-1" aria-labelledby="home-family-title">
+                <h3 id="home-family-title">后来的两个家</h3>
+                <p>上小学时，平房拆迁了。算上家里买的一套房，一共有两套。</p>
+                <p>住得最久的是六楼那套，从小学一年级一直到后来高中、大学住宿。小时候爬楼不算太辛苦。外面能玩的地方少了，但住起来比平房舒服。</p>
+                <p>家里三个孩子，我和哥哥一个房间，能一起玩游戏，但有时候没什么隐私。</p>
+                <p>隔一面墙就是学校，早上有时很吵，但看着学生的样子，又觉得很有能量。这是我记忆最多的家。</p>
+                <p>另一套在二楼，主要是爷爷奶奶住，空间比较开阔。经常有亲戚串门，玩电脑也不会有我妈在旁边给压力。不过亲戚偶尔见见还好，总是接触，也不是很喜欢。</p>
+              </section>
+              <section class="note-subsection" id="home-dormitory" tabindex="-1" aria-labelledby="home-dormitory-title">
+                <h3 id="home-dormitory-title">高中和大学宿舍</h3>
+                <p>高中宿舍条件一般。集体生活压力比较大，没自己的空间。不过能约人跑步、打羽毛球、去图书馆，也有一些有趣的事。</p>
+                <p>大学宿舍也差不多，住得舒不舒服，很看室友。高中大家主要学习、运动，大学更自由，但有些室友晚上很吵，也不爱卫生。吐槽一下，大学四年的厕所基本都是我在洗。</p>
+              </section>
+              <section class="note-subsection" id="home-renting" tabindex="-1" aria-labelledby="home-renting-title">
+                <h3 id="home-renting-title">两次租房</h3>
+                <p>第一次租在城中村，住了五个月。第一次租房没注意采光，虽然早上一般不在家，但还是不喜欢屋里太暗。</p>
+                <p>刚开始一个人住还好，后来会孤独，尤其生病没人照顾的时候。有时听到楼下情侣说话，还会有点羡慕。</p>
+                <p>现在的房子阳光很足，也有地方养花。一个人住很自由，但很多时候太安静，反而更觉得孤独。</p>
+              </section>
+            </article>
+            <article class="note-entry" id="work" tabindex="-1">
+              <span class="note-index">04 / 工作</span><h2>工作</h2>
+              <section class="note-subsection" id="work-game-planning" tabindex="-1" aria-labelledby="work-game-planning-title">
+                <h3 id="work-game-planning-title">游戏策划</h3>
+                <p>现在做游戏策划，日常要写活动、系统策划案，配表，提人物皮肤美术需求、技能特效需求。也有很多时间在和不同岗位的人沟通、开会。</p>
+                <p>比较喜欢人物美术和技能特效需求这部分。可以从以前喜欢的作品里找灵感，还挺爽的。</p>
+                <p>工作后也犯过一些错，特别是需要别人帮我善后的时候，会比较难受。</p>
+                <p>不喜欢的地方也有，有些可能和环境有关。这里可能会被熟人看到，就不展开了。感兴趣可以直接找我聊。</p>
+                <p>以后也想找机会做副业。</p>
+              </section>
+              <section class="note-subsection" id="work-tutoring" tabindex="-1" aria-labelledby="work-tutoring-title">
+                <h3 id="work-tutoring-title">做家教</h3>
+                <p>大二想赚点钱，去做了家教。教一个初一男生数学，一小时 60 元，周末教两小时。</p>
+                <p>人挺乖的，但教起来没那么容易。把题拆得很细，也试过类比这些方法，还是没能很好地教会他。当时讲完会做，过几十分钟又不会了。现在回头看，应该还可以多试些教法。</p>
+                <p>后来生病，又赶上期末，就匆忙结束了。觉得自己以后应该不会当老师，也就没想着继续做家教。算是一次不错的经历。</p>
+              </section>
+              <div class="text-links"><a href="#action/environment-experience">环境如何影响尝试？ <span aria-hidden="true">↗</span></a></div>
+            </article>
+            <article class="note-entry" id="relationship" tabindex="-1">
+              <span class="note-index">05 / 恋爱关系</span><h2>恋爱</h2>
+              <p>工作以前很少想谈恋爱。升学、找工作，加上自己的兴趣，已经挺充实了。工作稳定些以后，加上生病时的孤独感，才开始想认识一个特别的人。到现在四个多月。</p>
+              <p>我的恋爱观比较理想，也比较纯爱。但容易考虑太多，还没怎么相处，就先有了很多判断和结论。现在也在学怎么和女生自然相处、倾听，保持自己的主体性，提高自己的价值。</p>
+              <p>以前不怎么发朋友圈，担心隐私、被比较。但不展示，别人也少了一个了解我的机会。现在开始每周分享一些生活。</p>
+              <p>也发现自己会喜欢好看一些的女生，所以自己也开始健身，研究穿搭、发型。还没到满意的状态，但有在改变。</p>
+              <p>和不同的人交流后，原来的一些想法变了。没有完全认同别人的看法，但确实很有价值。</p>
+              <p>到现在有遇到过有好感的女生，但还没谈上恋爱。或许四个多月还太短，还有好多东西要学。具体经历不在这里写，想聊的可以联系我。</p>
+            </article>
+            <nav class="topic-related text-links" aria-label="读完之后" hidden></nav>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel collection-panel" id="life" aria-labelledby="life-title" hidden>
+        <div class="page-heading"><p class="eyebrow">03 / SIDE QUESTS</p><h1 id="life-title" tabindex="-1">故事之外，还有故事<span>✳</span></h1><p>电影、番剧、游戏和书。也想和你聊聊喜欢的作品。</p></div>
+        <div class="interest-categories" role="group" aria-label="兴趣类别" hidden>
+          <button type="button" data-interest-category="interest-animation" aria-controls="interest-animation" aria-pressed="true">番剧 <i>19 部／系列</i></button>
+          <button type="button" data-interest-category="interest-games" aria-controls="interest-games" aria-pressed="false">游戏 <i>6 款</i></button>
+          <button type="button" data-interest-category="interest-films" aria-controls="interest-films" aria-pressed="false">电影 <i>10 部</i></button>
+          <button type="button" data-interest-category="interest-books" aria-controls="interest-books" aria-pressed="false">书 <i>8 本</i></button>
+        </div>
+        <section class="interest-collection" id="interest-animation" aria-labelledby="interest-animation-title">
+          <h2 id="interest-animation-title">最喜欢的一些番剧</h2>
+          <ul class="interest-list">
+            <li>物语系列</li><li>CLANNAD</li><li>心理测量者</li><li>狼与香辛料</li><li>反叛的鲁路修</li>
+            <li>轻音少女</li><li>排球少年</li><li>三月的狮子</li><li>来自深渊</li><li>暗杀教室</li>
+            <li>FLCL（特别的她）</li><li>葬送的芙莉莲</li><li>血界战线</li><li>冰菓</li><li>龙与虎</li>
+            <li>宝石之国</li><li>漂流少年</li><li>Angel Beats!</li><li>xxxHOLiC</li>
+          </ul>
+        </section>
+        <section class="interest-collection" id="interest-games" aria-labelledby="interest-games-title">
+          <h2 id="interest-games-title">玩过的一部分游戏</h2>
+          <ul class="interest-list"><li>八方旅人</li><li>最终幻想7</li><li>女神异闻录5</li><li>鸣潮</li><li>英雄联盟</li><li>杀戮尖塔</li></ul>
+        </section>
+        <section class="interest-collection" id="interest-films" aria-labelledby="interest-films-title">
+          <h2 id="interest-films-title">喜欢、也推荐的电影</h2>
+          <ul class="interest-list"><li>海上钢琴师</li><li>怦然心动</li><li>黑天鹅</li><li>银翼杀手</li><li>天堂电影院</li><li>天使爱美丽</li><li>飞越疯人院</li><li>死亡诗社</li><li>爱乐之城</li><li>楚门的世界</li></ul>
+        </section>
+        <section class="interest-collection" id="interest-books" aria-labelledby="interest-books-title">
+          <h2 id="interest-books-title">推荐的书</h2>
+          <ul class="interest-list"><li>麦田里的守望者</li><li>伟大为什么不能被计划</li><li>被讨厌的勇气</li><li>绿野仙踪</li><li>变形记</li><li>禅与摩托车维修艺术</li><li>纳瓦尔宝典</li><li>老人与海</li></ul>
+        </section>
+        <div class="text-links"><a href="#music">换个频道，去音乐大厅 ↗</a><a href="#about" data-return-home>回到关于我 ↙</a></div>
+      </section>
+
+      <section class="panel collection-panel" id="music" aria-labelledby="music-title" hidden>
+        <div class="page-heading"><p class="eyebrow">04 / MUSIC HALL</p><h1 id="music-title" tabindex="-1">音乐大厅<span>♪</span></h1><p>给喜欢的音乐，留一个位置。</p></div>
+        <p class="collection-description">先留下六个名字。曲目还在整理，这里暂时没有播放功能。</p>
+        <div class="music-grid" aria-label="音乐内容的六个候选名称">
+          <article class="music-item"><span>01 /</span><h2>NO<br />LIMIT</h2><p>不设限</p><span class="music-mark" aria-hidden="true">↗</span></article>
+          <article class="music-item"><span>02 /</span><h2 aria-label="OTHERWORLD">OTHER<br />WORLD</h2><p>另一个世界</p><span class="music-mark" aria-hidden="true">✳</span></article>
+          <article class="music-item"><span>03 /</span><h2>FOREVER<br />YOUNG</h2><p>永远年轻</p><span class="music-mark" aria-hidden="true">∞</span></article>
+          <article class="music-item"><span>04 /</span><h2>AFTER<br />DARK</h2><p>午夜之后</p><span class="music-mark" aria-hidden="true">☾</span></article>
+          <article class="music-item"><span>05 /</span><h2>GOOD<br />VIBES</h2><p>天气俱乐部</p><span class="music-mark" aria-hidden="true">☼</span></article>
+          <article class="music-item"><span>06 /</span><h2>SOUL<br />SPACE</h2><p>灵魂留白</p><span class="music-mark" aria-hidden="true">≈</span></article>
+        </div>
+        <a class="return-button" href="#about" data-return-home>↙ 回到关于我</a>
+      </section>
+
+      <section class="panel collection-panel" id="shares" aria-labelledby="shares-title" hidden>
+        <div class="page-heading"><p class="eyebrow">05 / WORK IN PROGRESS</p><h1 id="shares-title" tabindex="-1">工具和项目分享<span>↗</span></h1><p>做过的东西，和想分享的发现。</p></div>
+        <div class="empty-note"><span aria-hidden="true">＋</span><h2>留一块地方，给接下来的实践。</h2><p>具体工具和项目还在整理，有内容后再放进来。</p><a class="return-button" href="#about" data-return-home>↙ 先认识一下我</a></div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><span>© <span id="year">2026</span> 李佳润 · RYE</span><span>保持好奇，继续探索。<span aria-hidden="true"> ↗</span></span></footer>
+  </div>
+  <noscript><style>.panel[hidden] { display: block !important; } .reading-index { position: static; }</style><p class="noscript-note">当前显示所有栏目；开启 JavaScript 后可使用栏目切换和阅读位置恢复。</p></noscript>
+</body>
+</html>

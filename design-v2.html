@@ -4,79 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#183dcb" />
-  <title>Rye · 坡上麦田 — 第二版设计预览</title>
+  <title>Rye · 最新游戏界面预览</title>
   <meta name="description" content="我是李佳润，Rye，一名游戏策划。这里记录我的入行经历、行动与思考，以及喜欢的故事和音乐。认识彼此，一起变得更好。" />
-  <link rel="stylesheet" href="css/style.css?v=environment-1" />
-  <link rel="stylesheet" href="css/open-sky.css?v=reading-2" />
-  <script src="js/main.js?v=environment-1" defer></script>
+  <link rel="stylesheet" href="css/style.css?v=game-1" />
+  <script src="js/main.js?v=game-1" defer></script>
+  <link rel="stylesheet" href="css/game-ui.css?v=alignment-20261122" />
+  <script src="js/game-ui.js?v=alignment-20261122" defer></script>
 </head>
-<body class="open-sky">
-  <div class="sky-scene" aria-hidden="true">
-    <div class="sky-light"></div>
-    <svg class="wind-lines" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice"><path d="M-100 300Q260 200 700 50M-100 323Q260 228 700 70M790 105Q1100 40 1520 85M1040 640Q1300 520 1600 505" /></svg>
-    <div class="far-hill"></div>
-    <div class="near-hill"></div>
-    <svg class="wheat-field" viewBox="0 0 1440 370" preserveAspectRatio="xMidYMax slice">
-      <defs>
-        <g id="grain">
-          <path class="stem" d="M0 168Q10 82 27 8M19 50L4 15M23 35L40 2M14 75L-2 40M19 58L39 23M9 99L-8 64M13 82L35 49" />
-          <path d="M25 24Q13 8 30-8Q43 9 25 24M21 43Q-4 35 1 15Q24 20 21 43M22 44Q45 45 49 23Q27 24 22 44M16 67Q-10 58-5 37Q19 44 16 67M17 68Q40 70 47 48Q23 46 17 68M11 92Q-16 81-11 60Q13 67 11 92M12 93Q36 95 42 73Q19 71 12 93M6 116Q-21 105-17 84Q9 91 6 116M7 117Q30 120 37 97Q14 94 7 117" />
-        </g>
-      </defs>
-      <g class="distant-grains">
-        <use href="#grain" transform="translate(30 252) scale(.38) rotate(-12)"/><use href="#grain" transform="translate(91 242) scale(.42) rotate(-8)"/><use href="#grain" transform="translate(157 225) scale(.4) rotate(-5)"/><use href="#grain" transform="translate(212 215) scale(.44) rotate(4)"/><use href="#grain" transform="translate(270 204) scale(.4) rotate(-8)"/><use href="#grain" transform="translate(327 192) scale(.45) rotate(4)"/><use href="#grain" transform="translate(383 180) scale(.4) rotate(-12)"/><use href="#grain" transform="translate(446 168) scale(.42) rotate(-7)"/><use href="#grain" transform="translate(508 154) scale(.42) rotate(6)"/><use href="#grain" transform="translate(565 141) scale(.4) rotate(-6)"/><use href="#grain" transform="translate(622 128) scale(.42) rotate(-5)"/><use href="#grain" transform="translate(680 117) scale(.45) rotate(4)"/><use href="#grain" transform="translate(739 103) scale(.4) rotate(-8)"/><use href="#grain" transform="translate(798 92) scale(.4) rotate(3)"/><use href="#grain" transform="translate(859 81) scale(.4) rotate(-10)"/><use href="#grain" transform="translate(923 72) scale(.44) rotate(-5)"/><use href="#grain" transform="translate(985 60) scale(.4) rotate(5)"/><use href="#grain" transform="translate(1047 51) scale(.44) rotate(-8)"/><use href="#grain" transform="translate(1110 41) scale(.4) rotate(-3)"/><use href="#grain" transform="translate(1170 34) scale(.44) rotate(3)"/><use href="#grain" transform="translate(1234 28) scale(.4) rotate(-5)"/><use href="#grain" transform="translate(1297 22) scale(.45) rotate(-9)"/><use href="#grain" transform="translate(1358 18) scale(.4) rotate(3)"/><use href="#grain" transform="translate(1416 13) scale(.45) rotate(-4)"/>
-      </g>
-      <g class="foreground-grains"><use href="#grain" transform="translate(8 217) scale(1.2) rotate(-15)"/><use href="#grain" transform="translate(68 247) scale(1.05) rotate(8)"/><use href="#grain" transform="translate(145 223) scale(1.25) rotate(-10)"/><use href="#grain" transform="translate(210 250) scale(.9) rotate(2)"/><use href="#grain" transform="translate(1190 250) scale(1.3) rotate(8)"/><use href="#grain" transform="translate(1280 205) scale(1.3) rotate(-6)"/><use href="#grain" transform="translate(1375 160) scale(1.55) rotate(-2)"/></g>
-      <g class="field-lines"><path d="M180 370Q510 240 1440 165M415 370Q880 215 1440 200M790 370Q1180 257 1440 255"/></g>
-    </svg>
-  </div>
+<body class="game-shell">
   <a class="skip-link" href="#main">跳到正文</a>
   <div class="site-shell">
     <header class="site-header">
-      <a class="brand" href="#about" aria-label="Rye，返回首页">r<span class="brand-y">y</span>e<span class="brand-star" aria-hidden="true">✳</span></a>
-      <nav class="navigation" aria-label="主要导航">
-        <a href="#about" class="nav-link is-active" aria-current="page"><span>01</span>关于我</a>
-        <a href="#action" class="nav-link"><span>02</span>行动与思考</a>
-        <a href="#life" class="nav-link"><span>03</span>兴趣</a>
-        <a href="#music" class="nav-link"><span>04</span>音乐大厅</a>
-        <a href="#shares" class="nav-link"><span>05</span>工具和项目</a>
-      </nav>
-      <span class="header-note">不止一种可能<br />A LITTLE WORLD BY RYE</span>
+      <a class="brand" href="#menu" aria-label="Rye，返回主菜单">r<span class="brand-y">y</span>e<span class="brand-star" aria-hidden="true">✳</span></a>
+      <nav class="navigation" aria-label="主要导航"><a href="#about" class="nav-link">关于我</a><a href="#action" class="nav-link">行动与思考</a><a href="#life" class="nav-link">兴趣</a><a href="#shares" class="nav-link">工具和项目</a></nav><button class="motion-toggle" type="button" aria-pressed="true">动效 ON</button>
+      <span class="header-note">A LITTLE WORLD<br />BY RYE</span>
     </header>
 
     <main id="main" tabindex="-1">
-      <section class="panel home-panel is-active" id="about" aria-labelledby="home-title">
-        <div class="identity">
-          <div class="identity-top"><span>HELLO, WORLD.</span><span>保持好奇 / 继续探索</span></div>
-          <div class="rye-wordmark" aria-hidden="true">RYE</div>
-          <svg class="wheat-art" viewBox="0 0 460 400" fill="none" aria-hidden="true">
-            <circle cx="263" cy="203" r="145" stroke="currentColor" stroke-width="1" />
-            <circle cx="263" cy="203" r="126" stroke="currentColor" stroke-width="1" stroke-dasharray="2 8" />
-            <path d="M79 385C180 304 253 185 312 43M146 400C222 316 296 249 399 205" stroke="currentColor" stroke-width="4" />
-            <g fill="currentColor">
-              <path d="M296 83Q269 45 299 8Q326 48 296 83ZM282 113Q236 99 242 55Q288 71 282 113ZM281 115Q325 116 345 74Q302 72 281 115ZM264 151Q219 136 222 95Q268 109 264 151ZM264 151Q309 155 332 113Q289 111 264 151ZM245 190Q199 176 200 134Q248 147 245 190ZM245 190Q289 196 316 155Q270 151 245 190ZM221 230Q176 213 177 171Q224 186 221 230ZM221 230Q265 239 295 198Q249 192 221 230ZM196 267Q151 251 148 209Q196 224 196 267ZM196 267Q240 279 271 239Q225 232 196 267ZM369 225Q373 188 415 180Q412 220 369 225ZM339 245Q335 205 371 186Q379 226 339 245ZM337 248Q368 275 402 251Q373 222 337 248ZM305 273Q300 234 331 213Q343 254 305 273ZM302 276Q332 306 368 284Q337 252 302 276ZM271 303Q260 264 288 240Q306 278 271 303ZM269 306Q298 337 334 318Q306 285 269 306Z" />
-            </g>
-            <path d="M42 178h31m-15-15v30M385 68h24m-12-12v24M362 345h35m-17-17v34" stroke="currentColor" stroke-width="2" />
-          </svg>
-          <div class="name-block">
-            <p class="identity-kicker">在这里，认识一个具体的人。</p>
-            <div class="name-line"><h1 id="home-title">李佳润<span>Rye.</span></h1><span class="occupation">游戏策划<span>GAME PLANNER</span></span></div>
-            <p class="purpose">认识彼此，<br />一起变得更好<span class="period">。</span></p>
-            <p class="purpose-en">LET’S MEET. LET’S GROW.</p>
-          </div>
-          <div class="identity-bottom"><a href="#stories">从一段故事开始 <span aria-hidden="true">↘</span></a><span>SCROLL TO EXPLORE</span></div>
-          <svg class="mobile-field" viewBox="0 0 390 174" preserveAspectRatio="none" aria-hidden="true">
-            <path d="M0 75Q180 25 390 0V174H0Z" fill="#f6dd8e"/>
-            <path d="M0 103Q185 48 390 28V174H0Z" fill="#e9b83f"/>
-            <g fill="#ffe49a" color="#ffe49a">
-              <use href="#grain" transform="translate(20 98) scale(.23)"/><use href="#grain" transform="translate(61 83) scale(.25)"/><use href="#grain" transform="translate(105 72) scale(.22)"/><use href="#grain" transform="translate(147 61) scale(.25)"/><use href="#grain" transform="translate(190 50) scale(.22)"/><use href="#grain" transform="translate(232 40) scale(.25)"/><use href="#grain" transform="translate(275 31) scale(.23)"/><use href="#grain" transform="translate(318 22) scale(.25)"/><use href="#grain" transform="translate(360 16) scale(.22)"/>
-            </g>
-            <g fill="none" stroke="#fff0b4" opacity=".4"><path d="M0 153Q190 95 390 80M80 174Q230 126 390 112"/></g>
-          </svg>
-        </div>
-
+<section class="panel menu-panel is-active" id="menu" aria-labelledby="menu-title">
+ <div class="menu-art" aria-hidden="true"><span class="menu-word">RYE</span><div class="menu-portrait"><img src="review/p5-tutorial-2026-11-21/p5-portrait-blue-transparent.png" width="1200" height="1200" alt="" fetchpriority="high" decoding="async" draggable="false"><span class="portrait-stamp">RYE / PLAYER 01</span></div><span class="art-caption">HELLO, WORLD. / RYE</span><span class="art-corner">✳</span></div>
+ <div class="menu-content"><p class="eyebrow">游戏策划 / 李佳润</p><h1 id="menu-title" tabindex="-1">认识彼此，<br>一起变得更好。</h1><nav class="main-choices" aria-label="从这里开始"><a href="#about"><span>01</span><strong>关于我</strong><i aria-hidden="true">↗</i><small>开始走自己的路</small></a><a href="#action"><span>02</span><strong>行动与思考</strong><i aria-hidden="true">↗</i><small>认识自己的过程</small></a><a href="#life"><span>03</span><strong>兴趣</strong><i aria-hidden="true">↗</i><small>也想和你聊聊喜欢的作品</small></a><a href="#shares"><span>04</span><strong>工具和项目</strong><i aria-hidden="true">↗</i><small>留给接下来的实践</small></a></nav><p class="menu-foot">宝藏在迷雾中，拥抱不确定性。</p></div>
+ </section>
+      <section class="panel home-panel" id="about" aria-labelledby="home-title" hidden>
+        <a class="page-return" href="#menu"><span class="return-mark" aria-hidden="true">←</span><span>返回主菜单</span></a><div class="page-heading about-heading"><p class="eyebrow">01 / ABOUT ME</p><h1 id="home-title" tabindex="-1">一些关于我的事</h1><p>李佳润 · Rye / 游戏策划</p></div>
         <div class="home-stories" id="stories">
-          <div class="section-overline"><span>一些关于我的事</span><span>GET TO KNOW ME ↙</span></div>
+          <div class="section-overline"><span>一些关于我的事</span><span>GET TO KNOW ME</span></div>
           <article class="intro-row">
             <div class="intro-number" aria-hidden="true">01<span>START</span></div>
             <div class="intro-copy">
@@ -104,17 +56,17 @@
       </section>
 
       <section class="panel reading-panel" id="action" aria-labelledby="action-title" hidden>
-        <div class="page-heading" data-action-heading><p class="eyebrow">02 / KNOW YOURSELF</p><h1 id="action-title" tabindex="-1">行动与思考<span>↗</span></h1><p>认识自己的过程。</p></div>
-        <nav class="topic-directory" aria-label="选择阅读主题">
-          <a href="#action/cognition"><span class="topic-number">01</span><span><strong>认知</strong><span>几个容易听懂，却不容易内化的想法</span></span><span aria-hidden="true">↗</span></a>
-          <a href="#action/environment"><span class="topic-number">02</span><span><strong>环境</strong><span>过去的自己，也和过去的环境有关</span></span><span aria-hidden="true">↗</span></a>
-          <a href="#action/home"><span class="topic-number">03</span><span><strong>房子</strong><span>想住在什么样的地方</span></span><span aria-hidden="true">↗</span></a>
-          <a href="#action/work"><span class="topic-number">04</span><span><strong>工作</strong><span>游戏策划、做家教</span></span><span aria-hidden="true">↗</span></a>
-          <a href="#action/relationship"><span class="topic-number">05</span><span><strong>恋爱关系</strong><span>想法与改变</span></span><span aria-hidden="true">↗</span></a>
-        </nav>
+        <a class="page-return action-menu-return" href="#menu"><span class="return-mark" aria-hidden="true">←</span><span>返回主菜单</span></a><div class="page-heading" data-action-heading><p class="eyebrow">02 / KNOW YOURSELF</p><h1 id="action-title" tabindex="-1">行动与思考<span>↗</span></h1><p>认识自己的过程。</p></div>
+        <div class="topic-stage"><nav class="topic-directory" aria-label="选择阅读主题">
+          <a href="#action/cognition" data-topic-preview="0"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="square" aria-hidden="true"><path d="M20 78V48L48 20m-28 28h42m-14-28h20v20M62 48h18v30"/></svg><span class="topic-number">01</span><span><strong>认知</strong><span>有些机会，开始尝试以后才看得见。</span></span><span aria-hidden="true">↗</span></a>
+          <a href="#action/environment" data-topic-preview="1"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="square" aria-hidden="true"><path d="M18 16h64v68H18zM50 16v68M18 48h64"/></svg><span class="topic-number">02</span><span><strong>环境</strong><span>环境不仅影响能做什么，也影响拿什么经历来认识自己。</span></span><span aria-hidden="true">↗</span></a>
+          <a href="#action/home" data-topic-preview="2"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="square" aria-hidden="true"><path d="M12 48L50 16l38 32M24 40v44h52V40M43 84V60h16v24"/></svg><span class="topic-number">03</span><span><strong>房子</strong><span>住过这些地方，现在比较在意阳光、卫生和自己的空间。</span></span><span aria-hidden="true">↗</span></a>
+          <a href="#action/work" data-topic-preview="3"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="square" aria-hidden="true"><path d="M20 76l5-20L69 12l19 19-44 44-24 5zM25 56l19 19M59 22l19 19"/></svg><span class="topic-number">04</span><span><strong>工作</strong><span>比较喜欢人物美术和技能特效需求这部分。</span></span><span aria-hidden="true">↗</span></a>
+          <a href="#action/relationship" data-topic-preview="4"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="square" aria-hidden="true"><path d="M55 28a25 25 0 1 0 0 44M45 28a25 25 0 1 1 0 44"/></svg><span class="topic-number">05</span><span><strong>恋爱关系</strong><span>和不同的人交流后，原来的一些想法变了。</span></span><span aria-hidden="true">↗</span></a>
+        </nav><aside class="topic-preview" aria-hidden="true"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="square" aria-hidden="true"><path d="M20 78V48L48 20m-28 28h42m-14-28h20v20M62 48h18v30"/></svg><span>01 / 认知</span><p>有些机会，开始尝试以后才看得见。</p></aside></div>
         <div class="article-toolbar" hidden>
           <p class="article-path"><span class="know-yourself">KNOW YOURSELF</span>行动与思考 / <span data-topic-name></span></p>
-          <nav aria-label="文章返回"><a href="#about" data-reading-return hidden>↙ 返回刚才的位置</a><a href="#action">浏览全部主题 ↗</a></nav>
+          <nav aria-label="文章返回"><a href="#about" data-reading-return hidden><span class="return-mark" aria-hidden="true">←</span><span data-return-label>返回刚才的位置</span></a><a href="#action" class="all-topics">全部主题 ↗</a></nav>
         </div>
         <div class="reading-layout">
           <aside class="reading-index chapter-index" aria-label="认知小节"><span>本篇目录 / 5 节</span><a href="#action/cognition/uncertainty">01 拥抱不确定性</a><a href="#action/cognition/growth">02 成长型思维</a><a href="#action/cognition/agency">03 主体思维</a><a href="#action/cognition/action">04 行动引领思考</a><a href="#action/cognition/learning">05 向有成果的人学习</a></aside>
@@ -257,34 +209,59 @@
       </section>
 
       <section class="panel collection-panel" id="life" aria-labelledby="life-title" hidden>
+        <a class="page-return" href="#menu"><span class="return-mark" aria-hidden="true">←</span><span>返回主菜单</span></a>
         <div class="page-heading"><p class="eyebrow">03 / SIDE QUESTS</p><h1 id="life-title" tabindex="-1">故事之外，还有故事<span>✳</span></h1><p>电影、番剧、游戏和书。也想和你聊聊喜欢的作品。</p></div>
-        <div class="interest-categories" aria-label="兴趣范围"><span>电影 <i>FILMS</i></span><span>番剧 <i>ANIMATION</i></span><span>游戏 <i>GAMES</i></span><span>书 <i>BOOKS</i></span></div>
-        <div class="collection-note"><span class="large-asterisk" aria-hidden="true">✳</span><div><p class="eyebrow">书架上的两个名字</p><h2>《麦田里的守望者》<br />《伟大为什么不能被计划》</h2><p>先记下提到过的书。具体的阅读感受、电影和番剧清单，之后慢慢整理。</p></div></div>
-        <div class="text-links"><a href="#music">换个频道，去音乐大厅 ↗</a><a href="#about" data-return-home>回到关于我 ↙</a></div>
+        <div class="interest-categories" role="group" aria-label="兴趣类别" hidden>
+          <button type="button" data-interest-category="interest-animation" aria-controls="interest-animation" aria-pressed="true">番剧 <i>19 部／系列</i></button>
+          <button type="button" data-interest-category="interest-games" aria-controls="interest-games" aria-pressed="false">游戏 <i>6 款</i></button>
+          <button type="button" data-interest-category="interest-films" aria-controls="interest-films" aria-pressed="false">电影 <i>10 部</i></button>
+          <button type="button" data-interest-category="interest-books" aria-controls="interest-books" aria-pressed="false">书 <i>8 本</i></button>
+        </div>
+        <section class="interest-collection" id="interest-animation" aria-labelledby="interest-animation-title">
+          <h2 id="interest-animation-title">最喜欢的一些番剧</h2>
+          <ul class="interest-list">
+            <li>物语系列</li><li>CLANNAD</li><li>心理测量者</li><li>狼与香辛料</li><li>反叛的鲁路修</li>
+            <li>轻音少女</li><li>排球少年</li><li>三月的狮子</li><li>来自深渊</li><li>暗杀教室</li>
+            <li>FLCL（特别的她）</li><li>葬送的芙莉莲</li><li>血界战线</li><li>冰菓</li><li>龙与虎</li>
+            <li>宝石之国</li><li>漂流少年</li><li>Angel Beats!</li><li>xxxHOLiC</li>
+          </ul>
+        </section>
+        <section class="interest-collection" id="interest-games" aria-labelledby="interest-games-title">
+          <h2 id="interest-games-title">玩过的一部分游戏</h2>
+          <ul class="interest-list"><li>八方旅人</li><li>最终幻想7</li><li>女神异闻录5</li><li>鸣潮</li><li>英雄联盟</li><li>杀戮尖塔</li></ul>
+        </section>
+        <section class="interest-collection" id="interest-films" aria-labelledby="interest-films-title">
+          <h2 id="interest-films-title">喜欢、也推荐的电影</h2>
+          <ul class="interest-list"><li>海上钢琴师</li><li>怦然心动</li><li>黑天鹅</li><li>银翼杀手</li><li>天堂电影院</li><li>天使爱美丽</li><li>飞越疯人院</li><li>死亡诗社</li><li>爱乐之城</li><li>楚门的世界</li></ul>
+        </section>
+        <section class="interest-collection" id="interest-books" aria-labelledby="interest-books-title">
+          <h2 id="interest-books-title">推荐的书</h2>
+          <ul class="interest-list"><li>麦田里的守望者</li><li>伟大为什么不能被计划</li><li>被讨厌的勇气</li><li>绿野仙踪</li><li>变形记</li><li>禅与摩托车维修艺术</li><li>纳瓦尔宝典</li><li>老人与海</li></ul>
+        </section>
+        <div class="text-links"><a href="#music">换个频道，去音乐大厅 ↗</a><a href="#about" class="page-return" data-return-home><span class="return-mark" aria-hidden="true">←</span><span>返回自我介绍</span></a></div>
       </section>
 
       <section class="panel collection-panel" id="music" aria-labelledby="music-title" hidden>
+        <a class="page-return" href="#menu"><span class="return-mark" aria-hidden="true">←</span><span>返回主菜单</span></a>
         <div class="page-heading"><p class="eyebrow">04 / MUSIC HALL</p><h1 id="music-title" tabindex="-1">音乐大厅<span>♪</span></h1><p>给喜欢的音乐，留一个位置。</p></div>
-        <p class="collection-description">先留下六个名字。曲目还在整理，这里暂时没有播放功能。</p>
-        <div class="music-grid" aria-label="音乐内容的六个候选名称">
-          <article class="music-item"><span>01 /</span><h2>NO<br />LIMIT</h2><p>不设限</p><span class="music-mark" aria-hidden="true">↗</span></article>
-          <article class="music-item"><span>02 /</span><h2 aria-label="OTHERWORLD">OTHER<br />WORLD</h2><p>另一个世界</p><span class="music-mark" aria-hidden="true">✳</span></article>
-          <article class="music-item"><span>03 /</span><h2>FOREVER<br />YOUNG</h2><p>永远年轻</p><span class="music-mark" aria-hidden="true">∞</span></article>
-          <article class="music-item"><span>04 /</span><h2>AFTER<br />DARK</h2><p>午夜之后</p><span class="music-mark" aria-hidden="true">☾</span></article>
-          <article class="music-item"><span>05 /</span><h2>GOOD<br />VIBES</h2><p>天气俱乐部</p><span class="music-mark" aria-hidden="true">☼</span></article>
-          <article class="music-item"><span>06 /</span><h2>SOUL<br />SPACE</h2><p>灵魂留白</p><span class="music-mark" aria-hidden="true">≈</span></article>
-        </div>
-        <a class="return-button" href="#about" data-return-home>↙ 回到关于我</a>
+        <p class="collection-description">音乐分为两类，曲目还在整理。右下角的小唱片可展开、移动；这里暂时没有播放功能。</p><div class="music-categories"><section><span aria-hidden="true">♩</span><h2>有人声的音乐</h2><p>尚未添加曲目。</p></section><section><span aria-hidden="true">♫</span><h2>纯音乐</h2><p>尚未添加曲目。</p></section></div><a class="page-return" href="#about" data-return-home><span class="return-mark" aria-hidden="true">←</span><span>回到关于我</span></a>
       </section>
 
       <section class="panel collection-panel" id="shares" aria-labelledby="shares-title" hidden>
+        <a class="page-return" href="#menu"><span class="return-mark" aria-hidden="true">←</span><span>返回主菜单</span></a>
         <div class="page-heading"><p class="eyebrow">05 / WORK IN PROGRESS</p><h1 id="shares-title" tabindex="-1">工具和项目分享<span>↗</span></h1><p>做过的东西，和想分享的发现。</p></div>
-        <div class="empty-note"><span aria-hidden="true">＋</span><h2>留一块地方，给接下来的实践。</h2><p>具体工具和项目还在整理，有内容后再放进来。</p><a class="return-button" href="#about" data-return-home>↙ 先认识一下我</a></div>
+        <div class="empty-note"><span aria-hidden="true">＋</span><h2>留一块地方，给接下来的实践。</h2><p>具体工具和项目还在整理，有内容后再放进来。</p><a class="page-return" href="#about" data-return-home><span class="return-mark" aria-hidden="true">←</span><span>先认识一下我</span></a></div>
       </section>
     </main>
+    <div class="menu-burst" aria-hidden="true" hidden>✳</div>
+    <div class="scene-transition" aria-hidden="true" hidden><div class="scene-cuts"><i></i><i></i><i></i></div><span></span></div>
 
     <footer class="site-footer"><span>© <span id="year">2026</span> 李佳润 · RYE</span><span>保持好奇，继续探索。<span aria-hidden="true"> ↗</span></span></footer>
   </div>
   <noscript><style>.panel[hidden] { display: block !important; } .reading-index { position: static; }</style><p class="noscript-note">当前显示所有栏目；开启 JavaScript 后可使用栏目切换和阅读位置恢复。</p></noscript>
+<aside class="sound-widget" aria-label="音乐附件" data-kind="vocal">
+ <button class="sound-disc" type="button" aria-label="音乐：展开歌单；方向键移动，Home归位" aria-expanded="false" aria-controls="sound-options"><span aria-hidden="true"></span></button>
+ <div class="sound-options" id="sound-options" hidden><div class="sound-controls"><button type="button" data-sound-kind="vocal" aria-label="有人声的音乐" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="2" width="8" height="13" rx="4"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3M8 22h8"/></svg></button><button type="button" data-sound-kind="instrumental" aria-label="纯音乐" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h18v18H3zM9 3v18M15 3v18M6 3v9M12 3v9M18 3v9"/></svg></button><button type="button" disabled aria-label="播放不可用：尚未添加曲目"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4l13 8-13 8zM3 3l18 18"/></svg></button></div><p class="sound-caption"><strong>有人声的音乐</strong><span>曲目整理中 · 暂不可播放</span></p><a href="#music">音乐内容 ↗</a></div>
+ </aside>
 </body>
 </html>

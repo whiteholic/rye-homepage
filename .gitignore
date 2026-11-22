@@ -4,3 +4,14 @@
 /review/portrait-*/**/*.jpeg
 /review/**/private-inputs/
 /review/**/__pycache__/
+# Personal portrait artwork used by the local webpage trial.
+/review/p5-tutorial-2026-11-21/*.png
+/review/p5-tutorial-2026-11-21/*.jpg
+/review/p5-tutorial-2026-11-21/*.jpeg
+/review/p5-tutorial-2026-11-21/*.psd
+!/review/p5-tutorial-2026-11-21/p5-portrait-blue-transparent.png
+# Machine-specific processing scripts, logs and downloaded models stay local.
+/review/p5-tutorial-2026-11-21/*.txt
+/review/p5-tutorial-2026-11-21/*.jsx
+/review/portrait-cutout-2026-11-21/*.onnx
+/review/portrait-cutout-2026-11-21/cutout.py

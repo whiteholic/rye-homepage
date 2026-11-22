@@ -98,8 +98,16 @@ main { background: var(--paper); }
 .return-button:hover { background: var(--gold); color: var(--blue); }
 .return-button:focus-visible { outline-offset: 4px; }
 .interest-categories { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid var(--line); }
-.interest-categories > span { padding: 26px 0; font-size: 22px; font-weight: 800; color: var(--blue); }
-.interest-categories i { display: block; font: 9px/1.5 Consolas, monospace; letter-spacing: 1px; margin-top: 9px; }
+.interest-categories > button { min-height: 72px; padding: 16px 8px; border: 0; border-bottom: 4px solid transparent; background: none; text-align: left; font-size: 20px; font-weight: 800; color: var(--blue); cursor: pointer; }
+.interest-categories > button[aria-pressed="true"] { border-bottom-color: var(--blue); background: var(--gold); }
+.interest-categories > button:hover { border-bottom-color: var(--blue); }
+.interest-categories > button:focus-visible { outline: 3px solid var(--blue); outline-offset: -3px; }
+.interest-categories i { display: block; font: normal 14px/1.5 var(--sans); margin-top: 6px; }
+.interest-collection { padding: 32px 0; }
+.interest-collection h2 { color: var(--blue-dark); font-size: 22px; line-height: 1.6; margin-bottom: 20px; }
+.interest-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 32px; list-style: none; padding: 0; margin: 0; }
+.interest-list li { padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 18px; line-height: 1.8; overflow-wrap: anywhere; }
+@media (max-width: 600px) { .interest-list { grid-template-columns: 1fr; } .interest-list li { font-size: 17px; } }
 .collection-note { display: flex; align-items: center; gap: 42px; padding: 54px 0; }
 .large-asterisk { font: 160px/1 Arial, sans-serif; color: var(--gold); }
 .collection-note h2 { font-size: 23px; line-height: 1.9; }
@@ -181,7 +189,7 @@ main { background: var(--paper); }
   .note-entry h2 { font-size: 22px; }
   .note-entry p { font-size: 13px; }
   .interest-categories { grid-template-columns: repeat(2, 1fr); }
-  .interest-categories > span { padding: 23px 0; font-size: 21px; }
+  .interest-categories > button { font-size: 18px; }
   .collection-note { display: block; padding: 30px 0; }
   .large-asterisk { font-size: 85px; display: block; margin-bottom: 25px; }
   .collection-note h2 { font-size: 18px; }

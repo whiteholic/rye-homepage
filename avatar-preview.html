@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#183dcb">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Rye · 游戏菜单与头像预览</title>
+  <link rel="stylesheet" href="css/portrait-preview.css">
+</head>
+<body>
+<div id="rye-motion" class="rye-concept" data-view="menu" data-selection="0">
+  <header class="rye-chrome">
+    <span class="rye-logo">rye<span>✳</span></span>
+    <span class="rye-edition">PERSONAL WORLD / VOL.01</span>
+    <button type="button" class="rye-motion-control" aria-pressed="true">动效 ON</button>
+  </header>
+  <main class="rye-stage">
+    <div class="rye-scene" aria-hidden="true">
+      <div class="rye-blue-slice"></div><div class="rye-halftone"></div>
+      <span class="rye-giant">RYE</span><span class="rye-outline-word">UNWRITTEN</span>
+      <svg class="rye-orbits" viewBox="0 0 620 620"><ellipse cx="310" cy="310" rx="285" ry="160" transform="rotate(-40 310 310)"/><ellipse cx="310" cy="310" rx="285" ry="160" transform="rotate(40 310 310)"/></svg>
+      <div class="rye-avatar-art rye-portrait"><img class="rye-portrait-image" src="review/p5-tutorial-2026-11-21/p5-portrait-blue-transparent.png" width="1200" height="1200" alt="" fetchpriority="high" decoding="async" draggable="false"><span class="rye-avatar-stamp">RYE / PLAYER 01</span></div>
+      <span class="rye-spark rye-spark-a">✳</span><span class="rye-spark rye-spark-b">✦</span>
+      <svg class="rye-wheat-mark" viewBox="0 0 100 170"><path d="m20 165 53-140m-42 108c-26-7-23-26-23-26 24-1 28 14 28 14m3-8c-21-10-18-25-18-25 22 2 23 12 23 12m3-8c-17-10-15-25-15-25 19 1 20 12 20 12m-16 47c27 10 37-12 37-12-20-8-31 0-31 0m2-13c29 6 35-16 35-16-21-3-29 4-29 4m2-15c24 2 30-18 30-18-20-1-25 5-25 5m3-13c-15-16-5-33-5-33 17 8 14 23 14 23"/></svg>
+    </div>
+    <section class="rye-menu-view" aria-label="首页主菜单">
+      <div class="rye-intro"><span class="rye-kicker">THE NEXT CHAPTER IS</span><h1>还没写好，<br><em>先去试试。</em></h1><p>我是 rye，游戏策划。<br>从迷茫，到开始行动。</p></div>
+      <nav class="rye-menu" aria-label="探索栏目">
+        <button type="button" class="rye-menu-item is-current" data-index="0" aria-current="true"><span class="rye-menu-num">01</span><span class="rye-menu-label">关于我<small>ABOUT ME</small></span><span class="rye-menu-arrow">↗</span></button>
+        <button type="button" class="rye-menu-item" data-index="1"><span class="rye-menu-num">02</span><span class="rye-menu-label">行动与思考<small>TRY / THINK / REPEAT</small></span><span class="rye-menu-arrow">↗</span></button>
+        <button type="button" class="rye-menu-item" data-index="2"><span class="rye-menu-num">03</span><span class="rye-menu-label">兴趣宇宙<small>INTO THE UNKNOWN</small></span><span class="rye-menu-arrow">↗</span></button>
+
+        <button type="button" class="rye-menu-item" data-index="3"><span class="rye-menu-num">04</span><span class="rye-menu-label">工具与项目<small>MAKE SOMETHING</small></span><span class="rye-menu-arrow">↗</span></button>
+      </nav>
+      <div class="rye-selection-note" aria-live="polite"><span>01 / 04</span><p>一段关于迷茫、选择和行动的自我介绍。</p></div>
+    </section>
+    <section class="rye-destination" aria-label="栏目内容" hidden>
+      <button type="button" class="rye-back"><span class="rye-return-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M26 16H6m10-10L6 16l10 10"/></svg></span><span>返回主菜单</span></button>
+      <div class="rye-page-heading"><span class="rye-page-en">ABOUT ME</span><h2>关于我</h2><span class="rye-page-number" aria-hidden="true">01</span></div>
+      <div class="rye-page-content"></div>
+    </section>
+    <aside class="rye-sound" aria-label="悬浮音乐" data-kind="vocal">
+      <button type="button" class="rye-sound-disc" aria-label="音乐，展开控制；拖动可移动，方向键移动，Home 归位" aria-expanded="false" aria-controls="rye-sound-options">
+        <svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="22" fill="var(--rye-ink)" stroke="var(--rye-paper)" stroke-width="2"/><circle cx="26" cy="26" r="16" fill="none" stroke="var(--rye-paper)" stroke-opacity=".4"/><circle cx="26" cy="26" r="12" fill="none" stroke="var(--rye-paper)" stroke-opacity=".25"/><path d="M11 23a16 16 0 0 1 9-11M32 40a16 16 0 0 0 9-10" fill="none" stroke="var(--rye-paper)" stroke-width="2"/><circle class="rye-sound-center" cx="26" cy="26" r="7"/><circle cx="26" cy="26" r="2" fill="var(--rye-ink)"/></svg>
+        <span class="rye-sound-star" aria-hidden="true">✦</span>
+      </button>
+      <div class="rye-sound-options" id="rye-sound-options" inert aria-hidden="true">
+        <div class="rye-sound-caption" aria-live="polite"><strong>人间电台</strong><small>曲目待添加</small></div>
+        <button type="button" class="rye-sound-mode rye-sound-voice" data-kind="vocal" aria-label="人间电台，歌唱曲目" aria-pressed="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="3" width="8" height="12" rx="4"/><path d="M5 11v2a7 7 0 0 0 14 0v-2M12 20v3M8 23h8"/></svg>
+        </button>
+        <button type="button" class="rye-sound-mode rye-sound-keys" data-kind="instrumental" aria-label="无词漫游，器乐曲目" aria-pressed="false">
+          <svg viewBox="0 0 26 24" aria-hidden="true"><path d="M3 5h20v15H3ZM10 5v15M17 5v15"/><path d="M8 5v8h4V5M15 5v8h4V5" class="rye-sound-black-key"/></svg>
+        </button>
+        <button type="button" class="rye-sound-play" aria-label="播放，曲目待添加" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 4 13 8L8 20Z"/></svg></button>
+      </div>
+    </aside>
+    <div class="rye-burst" aria-hidden="true">✳</div>
+    <div class="rye-transition" aria-hidden="true"><i></i><i></i><i></i><span>LET'S GO.</span></div>
+  </main>
+  <footer class="rye-footer"><span>NO MAP. STILL MOVING. ↗</span><span class="rye-footer-hint">选择一个入口，开始探索</span><button type="button" class="rye-replay">↻ 重播入场</button></footer>
+</div>
+<style>
+#rye-motion{--rye-yellow:#f8cc38;--rye-ink:#111b38;--rye-blue:#2370ed;--rye-paper:#fff8dd;--rye-electric:#83ecf1;font-family:"Arial Black","Microsoft YaHei",sans-serif;color:var(--rye-ink);background:var(--rye-yellow);isolation:isolate;overflow:clip;position:relative;width:100%;text-align:left;color-scheme:light;container-type:inline-size}
+#rye-motion *{box-sizing:border-box}#rye-motion button{font:inherit;cursor:pointer;border:0;border-radius:0}#rye-motion [hidden]{display:none!important}
+#rye-motion .rye-chrome{position:relative;z-index:5;display:flex;align-items:center;gap:18px;padding:16px 28px;border-bottom:2px solid var(--rye-ink);background:var(--rye-yellow)}
+#rye-motion .rye-logo{font-size:35px;font-weight:900;line-height:1;letter-spacing:-3px}#rye-motion .rye-logo span{font-size:23px;margin-left:5px;display:inline-block}
+#rye-motion .rye-edition{font-size:10px;font-weight:800;letter-spacing:1.5px;flex:1}#rye-motion .rye-motion-control{background:var(--rye-ink);color:var(--rye-paper);padding:9px 12px;font-size:11px;transform:rotate(-3deg)}
+#rye-motion .rye-stage{min-height:675px;position:relative;overflow:clip}#rye-motion .rye-scene{position:absolute;inset:0;pointer-events:none;transition:transform .7s cubic-bezier(.2,.8,.2,1),opacity .5s}
+#rye-motion .rye-blue-slice{position:absolute;inset:0;background:var(--rye-blue);clip-path:polygon(0 0,31% 0,48% 100%,0 100%);transition:clip-path .45s cubic-bezier(.2,.8,.2,1)}
+#rye-motion .rye-halftone{position:absolute;width:62%;height:65%;left:0;bottom:0;opacity:.36;background-image:radial-gradient(var(--rye-ink) 1.3px,transparent 1.5px);background-size:8px 8px;clip-path:polygon(0 0,72% 10%,100% 100%,0 100%)}
+#rye-motion .rye-giant{position:absolute;font-size:clamp(130px,34cqw,390px);line-height:.8;font-style:italic;letter-spacing:-.12em;top:70px;left:-23px;color:var(--rye-paper);font-weight:1000;opacity:.93;transform:rotate(-10deg);transition:transform .5s}
+#rye-motion .rye-outline-word{position:absolute;left:8px;bottom:42px;font-size:76px;line-height:1;letter-spacing:-5px;color:transparent;-webkit-text-stroke:1px var(--rye-paper);transform:rotate(-90deg);transform-origin:0 0;opacity:.55}
+#rye-motion .rye-orbits{position:absolute;left:-18%;top:10%;width:85%;fill:none;stroke:var(--rye-electric);stroke-width:1.5;opacity:.65;transform:rotate(-10deg)}
+#rye-motion .rye-figure{position:absolute;width:53%;height:92%;object-fit:contain;object-position:bottom;bottom:-26px;left:0;filter:drop-shadow(11px 8px 0 var(--rye-ink));transform:rotate(-8deg);transform-origin:50% 85%;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+#rye-motion .rye-spark{position:absolute;color:var(--rye-paper);font-weight:900;line-height:1}#rye-motion .rye-spark-a{left:8%;top:21%;font-size:66px;transform:rotate(12deg)}#rye-motion .rye-spark-b{left:40%;top:56%;font-size:82px;color:var(--rye-electric)}
+#rye-motion .rye-character-tag{position:absolute;left:4%;bottom:63px;background:var(--rye-paper);padding:8px 13px;font-size:16px;font-weight:900;transform:rotate(-8deg);box-shadow:5px 5px 0 var(--rye-ink)}#rye-motion .rye-character-tag span{display:block;font-size:10px;letter-spacing:3px;margin-top:4px}
+#rye-motion .rye-wheat-mark{position:absolute;bottom:9px;left:39%;width:60px;stroke:var(--rye-paper);stroke-width:3;fill:none;transform:rotate(12deg)}
+#rye-motion .rye-menu-view{position:relative;margin-left:47%;padding:30px 24px 24px 0;min-height:675px}#rye-motion .rye-intro{padding-left:27px;margin-bottom:21px;position:relative;z-index:2}
+#rye-motion .rye-kicker{font-size:10px;letter-spacing:2px;font-weight:800}#rye-motion h1{font-size:clamp(29px,4.3cqw,52px);line-height:1.16;letter-spacing:-2px;font-weight:900;margin:10px 0 13px}#rye-motion h1 em{font-style:normal;background:var(--rye-ink);color:var(--rye-yellow);box-shadow:6px 0 var(--rye-ink),-4px 0 var(--rye-ink)}
+#rye-motion .rye-intro p{font-family:"Microsoft YaHei",sans-serif;font-size:12px;line-height:1.8;margin:0;font-weight:500}
+#rye-motion .rye-menu{display:flex;flex-direction:column;align-items:stretch;gap:5px;position:relative;z-index:2}#rye-motion .rye-menu-item{position:relative;color:var(--rye-ink);background:transparent;text-align:left;display:flex;gap:10px;align-items:center;min-height:62px;padding:8px 16px 8px 20px;isolation:isolate;transition:color .18s;touch-action:manipulation}
+#rye-motion .rye-menu-item:before{content:"";position:absolute;inset:3px 2px;background:var(--rye-ink);clip-path:polygon(4% 8%,97% 0,100% 83%,0 100%);z-index:-1;transform:scaleX(.2);transform-origin:0 50%;opacity:0;transition:transform .25s cubic-bezier(.2,.8,.2,1),opacity .12s}
+#rye-motion .rye-menu-item:after{content:"";position:absolute;left:5px;bottom:0;width:88%;height:5px;transform:rotate(-2deg) scaleX(0);background:var(--rye-paper);transform-origin:0 0;transition:transform .22s .04s}
+#rye-motion .rye-menu-num{font-size:11px;font-weight:800;align-self:flex-start;margin-top:7px;opacity:.7}#rye-motion .rye-menu-label{font-size:25px;font-weight:900;letter-spacing:-1px;line-height:1.13;display:block;transform:rotate(-3deg);transform-origin:left center;transition:transform .24s cubic-bezier(.1,.9,.2,1)}
+#rye-motion .rye-menu-label small{font-size:9px;display:block;letter-spacing:1.3px;line-height:1.5;margin-top:4px;font-weight:700}#rye-motion .rye-menu-item:nth-child(2){margin-left:-17px}#rye-motion .rye-menu-item:nth-child(2) .rye-menu-label{font-size:31px;transform:rotate(-2deg)}#rye-motion .rye-menu-item:nth-child(3){margin-left:14px}#rye-motion .rye-menu-item:nth-child(4){margin-left:2px}#rye-motion .rye-menu-item:nth-child(5){margin-left:21px}
+#rye-motion .rye-menu-arrow{margin-left:auto;font-size:27px;opacity:0;transform:translate(-12px,8px);transition:.2s}#rye-motion .rye-menu-item.is-current{color:var(--rye-paper)}#rye-motion .rye-menu-item.is-current:before{opacity:1;transform:scaleX(1)}#rye-motion .rye-menu-item.is-current:after{transform:rotate(-2deg) scaleX(1)}#rye-motion .rye-menu-item.is-current .rye-menu-label{transform:rotate(-3deg) translateX(3px) scale(1.06)}#rye-motion .rye-menu-item.is-current .rye-menu-arrow{opacity:1;transform:translate(0,0)}
+#rye-motion .rye-selection-note{display:flex;gap:12px;align-items:start;margin:23px 5px 0 20px;border-top:1.5px solid var(--rye-ink);padding-top:10px}#rye-motion .rye-selection-note span{font-size:10px;font-weight:800;white-space:nowrap;margin-top:2px}#rye-motion .rye-selection-note p{font-family:"Microsoft YaHei",sans-serif;font-size:11px;line-height:1.6;margin:0;min-height:36px}
+#rye-motion .rye-footer{position:relative;z-index:5;background:var(--rye-ink);color:var(--rye-paper);padding:13px 24px;display:flex;align-items:center;gap:16px;font-size:10px;font-weight:800;letter-spacing:1px}#rye-motion .rye-footer-hint{margin-left:auto;font-weight:400;letter-spacing:0;font-size:11px}#rye-motion .rye-replay{color:var(--rye-yellow);background:transparent;white-space:nowrap;padding:5px;font-size:11px}
+#rye-motion[data-selection="1"] .rye-figure{transform:rotate(-3deg) translateX(-8px)}#rye-motion[data-selection="2"] .rye-figure{transform:rotate(-12deg) translateY(-8px)}#rye-motion[data-selection="3"] .rye-figure{transform:rotate(-6deg) scale(1.04)}#rye-motion[data-selection="4"] .rye-figure{transform:rotate(-1deg) translateX(-15px)}#rye-motion[data-selection="2"] .rye-blue-slice{clip-path:polygon(0 0,28% 0,46% 100%,0 100%)}#rye-motion[data-selection="3"] .rye-giant{transform:rotate(-5deg) translateY(12px)}
+#rye-motion .rye-burst{position:absolute;z-index:8;pointer-events:none;font-size:180px;color:var(--rye-paper);line-height:1;opacity:0;transform:translate(-50%,-50%) scale(.15)}#rye-motion .rye-burst.is-bursting{animation:rye-burst .48s ease-out both}
+#rye-motion .rye-transition{position:absolute;inset:0;z-index:10;pointer-events:none;visibility:hidden;overflow:hidden}#rye-motion .rye-transition i{position:absolute;inset:-30%;background:var(--rye-ink);transform:translateX(-140%) skewX(-18deg)}#rye-motion .rye-transition i:nth-child(2){background:var(--rye-blue);top:30%;bottom:30%}#rye-motion .rye-transition i:nth-child(3){background:var(--rye-paper);top:52%;bottom:28%}#rye-motion .rye-transition span{position:absolute;top:43%;left:10%;font-size:clamp(36px,10cqw,110px);font-style:italic;font-weight:1000;letter-spacing:-4px;color:var(--rye-yellow);opacity:0;transform:translateX(-50px) rotate(-5deg)}
+#rye-motion .rye-transition.is-running{visibility:visible}#rye-motion .rye-transition.is-running i{animation:rye-wipe .74s cubic-bezier(.65,0,.25,1) both}#rye-motion .rye-transition.is-running i:nth-child(2){animation-delay:.04s}#rye-motion .rye-transition.is-running i:nth-child(3){animation-delay:.08s}#rye-motion .rye-transition.is-running span{animation:rye-title-wipe .74s both}#rye-motion.is-returning .rye-transition{transform:scaleX(-1)}#rye-motion.is-returning .rye-transition span{transform:scaleX(-1)}
+#rye-motion .rye-destination{position:relative;min-height:675px;padding:26px 32px 50px;background:var(--rye-paper);isolation:isolate}#rye-motion .rye-destination:before{content:"";position:absolute;right:-10%;top:0;width:47%;height:200px;background:var(--rye-yellow);transform:skewX(-20deg);z-index:-1}#rye-motion .rye-back{background:var(--rye-ink);color:var(--rye-paper);padding:10px 16px;font-size:12px;transform:rotate(-2deg)}
+#rye-motion .rye-page-heading{position:relative;padding:34px 0 28px;border-bottom:3px solid var(--rye-ink);margin-bottom:24px}#rye-motion .rye-page-en{display:block;font-size:clamp(32px,7.5cqw,80px);font-weight:1000;letter-spacing:-3px;line-height:.95;color:var(--rye-blue);transform:rotate(-3deg);transform-origin:0 100%}#rye-motion .rye-page-heading h2{position:relative;display:inline-block;font-size:26px;font-weight:900;margin:14px 0 0;line-height:1.3;padding:2px 12px;color:var(--rye-paper);background:var(--rye-ink);transform:rotate(-2deg)}#rye-motion .rye-page-number{position:absolute;right:0;top:28px;font-size:74px;font-weight:1000;color:var(--rye-ink);opacity:.14}
+#rye-motion .rye-page-content{font-family:"Microsoft YaHei",sans-serif;font-size:14px;line-height:1.9;max-width:660px}#rye-motion .rye-page-content h3{font-size:23px;line-height:1.45;margin:0 0 15px;font-weight:800}#rye-motion .rye-page-content p{margin:0 0 18px}#rye-motion .rye-topic-list{display:flex;flex-direction:column;gap:0;margin:22px 0}#rye-motion .rye-topic{background:transparent;border-bottom:1px solid var(--rye-ink);padding:15px 4px;text-align:left;display:flex;align-items:center;gap:15px;color:var(--rye-ink)}#rye-motion .rye-topic b{font-size:12px;color:var(--rye-blue)}#rye-motion .rye-topic span{flex:1;font-size:17px;font-weight:800}#rye-motion .rye-topic em{font-size:20px;font-style:normal}#rye-motion .rye-topic:hover{background:var(--rye-yellow)}#rye-motion .rye-text-link{padding:1px 3px;background:var(--rye-yellow);border-bottom:2px solid var(--rye-blue);color:var(--rye-ink);font-weight:700}#rye-motion .rye-topic-back{background:transparent;color:var(--rye-blue);padding:8px 0;font-size:12px;margin-bottom:12px}#rye-motion .rye-quote{font-size:25px;font-weight:800;line-height:1.6;border-left:5px solid var(--rye-blue);padding-left:20px;margin:20px 0 24px}#rye-motion .rye-music-lines{display:flex;gap:7px;align-items:flex-end;height:55px;margin:23px 0}#rye-motion .rye-music-lines i{display:block;width:12px;background:var(--rye-blue);height:30%;transform-origin:bottom}#rye-motion .rye-music-lines i:nth-child(3n){background:var(--rye-ink);height:90%}#rye-motion .rye-music-lines i:nth-child(2n){height:60%}
+#rye-motion.is-entering .rye-figure{animation:rye-figure-enter .9s cubic-bezier(.16,.8,.2,1) both}#rye-motion.is-entering .rye-giant{animation:rye-type-enter .75s cubic-bezier(.16,.8,.2,1) both}#rye-motion.is-entering .rye-menu-item{animation:rye-item-enter .55s cubic-bezier(.16,.8,.2,1) both;animation-delay:calc(.12s + var(--rye-order)*.06s)}#rye-motion.is-page-entering .rye-page-heading{animation:rye-content-enter .45s both}#rye-motion.is-page-entering .rye-page-content{animation:rye-content-enter .55s .06s both}#rye-motion.is-ambient .rye-orbits{animation:rye-orbit 24s linear infinite}#rye-motion.is-ambient .rye-spark-a{animation:rye-star 7s ease-in-out infinite}#rye-motion.is-ambient .rye-music-lines i{animation:rye-equalizer 1.4s ease-in-out infinite alternate;animation-delay:calc(var(--rye-order)*-.17s)}
+@keyframes rye-burst{0%{opacity:1;transform:translate(-50%,-50%) scale(.15) rotate(-30deg)}70%{opacity:.9}100%{opacity:0;transform:translate(-50%,-50%) scale(1.8) rotate(60deg)}}
+@keyframes rye-wipe{0%{transform:translateX(-140%) skewX(-18deg)}43%,55%{transform:translateX(0) skewX(-18deg)}100%{transform:translateX(140%) skewX(-18deg)}}
+@keyframes rye-title-wipe{0%,15%{opacity:0;translate:-45px}32%,62%{opacity:1;translate:0}90%,100%{opacity:0;translate:70px}}
+@keyframes rye-figure-enter{from{translate:-90px 70px;opacity:0;rotate:-8deg}to{translate:0 0;opacity:1;rotate:0deg}}@keyframes rye-type-enter{from{translate:100px -35px;opacity:0}to{translate:0 0;opacity:.93}}@keyframes rye-item-enter{from{translate:90px 0;opacity:0}to{translate:0 0;opacity:1}}@keyframes rye-content-enter{from{translate:40px 12px;opacity:0}to{translate:0 0;opacity:1}}@keyframes rye-orbit{to{transform:rotate(350deg)}}@keyframes rye-star{50%{transform:rotate(45deg) scale(.8)}}@keyframes rye-equalizer{to{transform:scaleY(.3)}}
+#rye-motion.is-still *,#rye-motion.is-still *:before,#rye-motion.is-still *:after{animation:none!important;transition:none!important}#rye-motion.is-still .rye-transition{visibility:hidden}
+@media(prefers-reduced-motion:reduce){#rye-motion *,#rye-motion *:before,#rye-motion *:after{animation:none!important;transition:none!important}#rye-motion .rye-transition{visibility:hidden}}
+@container(max-width:540px){#rye-motion .rye-chrome{padding:12px 17px;gap:12px}#rye-motion .rye-logo{font-size:31px}#rye-motion .rye-edition{font-size:8px;letter-spacing:1px}#rye-motion .rye-motion-control{font-size:10px;padding:9px}#rye-motion .rye-stage{min-height:0}#rye-motion .rye-scene{height:312px}#rye-motion .rye-blue-slice{clip-path:polygon(0 0,72% 0,100% 100%,0 92%)}#rye-motion[data-selection="2"] .rye-blue-slice{clip-path:polygon(0 0,66% 0,100% 100%,0 92%)}#rye-motion .rye-giant{font-size:58cqw;top:30px;left:-12px}#rye-motion .rye-figure{width:65%;height:115%;left:29%;bottom:-13px;transform:rotate(-12deg)}#rye-motion .rye-orbits{width:100%;left:-18%;top:-24%}#rye-motion .rye-spark-a{top:42%;left:10%;font-size:50px}#rye-motion .rye-spark-b{left:76%;top:11%;font-size:48px}#rye-motion .rye-character-tag{left:5%;bottom:38px;font-size:13px}#rye-motion .rye-character-tag span{font-size:9px;letter-spacing:1px}#rye-motion .rye-wheat-mark{width:37px;left:12%;bottom:116px}#rye-motion .rye-outline-word{display:none}#rye-motion .rye-menu-view{margin-left:0;padding:321px 22px 24px;min-height:0}#rye-motion .rye-intro{padding-left:3px;margin-bottom:17px}#rye-motion .rye-kicker{font-size:9px}#rye-motion h1{font-size:33px;line-height:1.18;letter-spacing:-1px;margin:8px 0 10px}#rye-motion h1 br{display:none}#rye-motion .rye-intro p{font-size:12px;line-height:1.7}#rye-motion .rye-intro p br{display:none}#rye-motion .rye-menu-item{min-height:62px;padding-left:16px}#rye-motion .rye-menu-item:nth-child(2){margin-left:-8px}#rye-motion .rye-menu-item:nth-child(3){margin-left:6px}#rye-motion .rye-menu-item:nth-child(5){margin-left:9px}#rye-motion .rye-menu-label{font-size:26px}#rye-motion .rye-menu-item:nth-child(2) .rye-menu-label{font-size:29px}#rye-motion .rye-selection-note{margin:21px 0 0}#rye-motion .rye-footer{padding:11px 16px;gap:8px;font-size:8px}#rye-motion .rye-footer-hint{display:none}#rye-motion .rye-replay{margin-left:auto}#rye-motion .rye-destination{padding:22px 23px 38px;min-height:720px}#rye-motion .rye-page-en{font-size:48px;letter-spacing:-2px;overflow-wrap:anywhere}#rye-motion .rye-page-heading{padding-top:40px}#rye-motion .rye-page-number{font-size:57px;right:-5px;top:8px}#rye-motion .rye-page-content{font-size:14px}#rye-motion .rye-page-content h3{font-size:21px}#rye-motion .rye-quote{font-size:22px}#rye-motion .rye-transition span{font-size:52px;letter-spacing:-2px}}
+
+/* Small optional music accessory: no containing panel. */
+#rye-motion .rye-sound{position:absolute;z-index:9;left:24px;top:575px;width:48px;height:48px;--sound-accent:var(--rye-yellow)}
+#rye-motion .rye-sound[data-kind="instrumental"]{--sound-accent:var(--rye-electric)}
+#rye-motion .rye-sound-disc{position:relative;width:48px;height:48px;padding:0;display:block;background:transparent;touch-action:none;cursor:grab;user-select:none}
+#rye-motion .rye-sound-disc>svg{display:block;width:48px;height:48px;filter:drop-shadow(2px 3px 0 var(--rye-blue));transition:rotate .18s,scale .18s}
+#rye-motion .rye-sound-center{fill:var(--sound-accent);transition:fill .18s}
+#rye-motion .rye-sound-star{position:absolute;right:-3px;top:0;color:var(--rye-electric);font-size:16px;line-height:1;text-shadow:1px 1px var(--rye-ink);pointer-events:none}
+#rye-motion .rye-sound-options{position:absolute;left:0;bottom:0;width:160px;height:144px;pointer-events:none;opacity:0;visibility:hidden;transform:translateY(5px);transition:opacity .12s,transform .18s,visibility .18s}
+#rye-motion .rye-sound.is-open .rye-sound-options{opacity:1;visibility:visible;transform:none}
+#rye-motion .rye-sound.is-open .rye-sound-disc>svg{rotate:-12deg}
+#rye-motion .rye-sound-caption{position:absolute;left:0;top:0;white-space:nowrap;pointer-events:none;color:var(--rye-paper);text-shadow:1px 1px 0 var(--rye-ink),-1px -1px 0 var(--rye-ink),1px -1px 0 var(--rye-ink),-1px 1px 0 var(--rye-ink)}
+#rye-motion .rye-sound-caption strong{font-family:"Microsoft YaHei",sans-serif;display:block;font-size:12px;font-weight:700;line-height:1.5}
+#rye-motion .rye-sound-caption small{font-family:"Microsoft YaHei",sans-serif;display:block;font-size:11px;line-height:1.5}
+#rye-motion .rye-sound-options button{position:absolute;width:44px;height:44px;display:grid;place-items:center;padding:10px;background:transparent;color:var(--rye-paper);pointer-events:none}
+#rye-motion .rye-sound.is-open .rye-sound-options button{pointer-events:auto}
+#rye-motion .rye-sound-options button>svg{width:24px;height:24px;fill:var(--rye-paper);stroke:var(--rye-ink);stroke-width:2;stroke-linejoin:round;filter:drop-shadow(1px 2px 0 var(--rye-ink));transition:transform .16s}
+#rye-motion .rye-sound-options button[aria-pressed="true"]>svg{fill:var(--sound-accent)}
+#rye-motion .rye-sound-options button:hover>svg{transform:translateY(-2px) rotate(-6deg)}
+#rye-motion .rye-sound-voice{left:0;top:37px}#rye-motion .rye-sound-keys{left:46px;top:55px}#rye-motion .rye-sound-play{left:62px;top:99px;opacity:.45;cursor:default}
+#rye-motion .rye-sound-options .rye-sound-black-key{fill:var(--rye-ink)}
+#rye-motion .rye-sound.opens-left .rye-sound-options{left:auto;right:0}#rye-motion .rye-sound.opens-left .rye-sound-caption{left:auto;right:0;text-align:right}
+#rye-motion .rye-sound.opens-left .rye-sound-voice{left:auto;right:0}#rye-motion .rye-sound.opens-left .rye-sound-keys{left:auto;right:46px}#rye-motion .rye-sound.opens-left .rye-sound-play{left:auto;right:62px}
+#rye-motion .rye-sound.opens-down .rye-sound-options{bottom:auto;top:0}#rye-motion .rye-sound.opens-down .rye-sound-caption{top:127px}
+#rye-motion .rye-sound.opens-down .rye-sound-voice{top:65px}#rye-motion .rye-sound.opens-down .rye-sound-keys{top:48px}#rye-motion .rye-sound.opens-down .rye-sound-play{top:0}
+#rye-motion .rye-sound.is-dragging{z-index:12}#rye-motion .rye-sound.is-dragging .rye-sound-disc{cursor:grabbing}
+#rye-motion .rye-sound.is-dragging .rye-sound-disc>svg{scale:1.07}
+#rye-motion .rye-sound.is-switching .rye-sound-disc>svg{animation:rye-sound-turn .24s ease-out}
+@keyframes rye-sound-turn{from{rotate:-55deg}to{rotate:-12deg}}
+
+</style>
+<style>
+@container(max-width:540px){#rye-motion h1 br{display:block}}
+@container(max-width:330px){#rye-motion .rye-menu-item{gap:8px}#rye-motion .rye-menu-label{font-size:23px}#rye-motion .rye-menu-item:nth-child(2) .rye-menu-label{font-size:25px}#rye-motion .rye-menu-num{font-size:10px}}
+</style>
+<style>
+#rye-motion .rye-giant{font-size:clamp(140px,32cqw,390px);top:85px;left:-19px;opacity:.8}
+#rye-motion .rye-avatar-art{position:absolute;left:8%;top:134px;width:31%;max-width:260px;aspect-ratio:1;transform:rotate(-8deg);transition:transform .4s cubic-bezier(.15,.8,.2,1)}
+#rye-motion .rye-avatar-offset{position:absolute;inset:-12px -14px 8px 12px;background:var(--rye-electric);clip-path:polygon(0 10%,88% 0,100% 80%,12% 100%);transform:rotate(9deg)}
+#rye-motion .rye-avatar-cut{position:absolute;inset:0;background:var(--rye-paper);clip-path:polygon(0 8%,85% 0,100% 85%,9% 100%);display:flex;align-items:center;justify-content:center;isolation:isolate;box-shadow:inset 0 0 0 6px var(--rye-ink)}
+#rye-motion .rye-avatar-cut:after{content:"";position:absolute;inset:8%;border:1px solid var(--rye-blue);border-radius:50%;opacity:.35;z-index:-1}
+#rye-motion .rye-avatar-initial{font-size:clamp(85px,22cqw,220px);line-height:1;font-weight:1000;letter-spacing:-.15em;font-style:italic;margin-top:-15%;padding-right:15%;color:var(--rye-ink)}#rye-motion .rye-avatar-initial span{font-size:36%;color:var(--rye-blue);display:inline-block;transform:rotate(10deg);margin-left:9px;vertical-align:middle}
+#rye-motion .rye-avatar-caption{position:absolute;bottom:15%;left:18%;font-size:11px;font-weight:600;letter-spacing:4px;color:var(--rye-blue)}
+#rye-motion .rye-avatar-stamp{position:absolute;right:-6%;bottom:-6px;background:var(--rye-ink);color:var(--rye-yellow);font-size:10px;font-weight:800;padding:7px 12px;transform:rotate(4deg);letter-spacing:1px}
+#rye-motion .rye-character-tag{left:8%;bottom:auto;top:397px;font-size:12px;box-shadow:none;background:transparent;color:var(--rye-paper);padding:0;transform:rotate(-8deg)}#rye-motion .rye-character-tag span{font-size:10px;letter-spacing:1px}
+#rye-motion .rye-spark-a{font-size:45px;left:6%;top:14%}#rye-motion .rye-spark-b{left:36%;top:53%;font-size:54px}#rye-motion .rye-orbits{opacity:.4}#rye-motion .rye-wheat-mark{left:36%;width:47px;bottom:28px}
+#rye-motion .rye-menu-view{padding-top:40px;min-height:704px}#rye-motion .rye-menu{gap:11px;margin-top:28px}#rye-motion .rye-menu-item{min-height:65px}#rye-motion .rye-selection-note{margin-top:26px}#rye-motion .rye-stage{min-height:704px}#rye-motion .rye-destination{min-height:704px;padding-bottom:86px}
+#rye-motion[data-selection="1"] .rye-avatar-art{transform:rotate(-3deg) translateY(-5px)}#rye-motion[data-selection="2"] .rye-avatar-art{transform:rotate(-11deg) scale(1.035)}#rye-motion[data-selection="3"] .rye-avatar-art{transform:rotate(-5deg) translateX(5px)}
+#rye-motion.is-entering .rye-avatar-art{animation:rye-avatar-enter .8s cubic-bezier(.15,.8,.2,1) both}
+#rye-motion.is-ambient .rye-radio:not(.is-mini):not(.is-dragging) .rye-radio-ring{animation:rye-radio-orbit 18s linear infinite}#rye-motion.is-ambient .rye-radio:not(.is-dragging):not(.is-released) .rye-radio-shell{animation:rye-radio-float 6s ease-in-out infinite}
+@keyframes rye-avatar-enter{from{translate:-55px 20px;opacity:0;rotate:-7deg}to{translate:0 0;opacity:1;rotate:0deg}}@keyframes rye-radio-open{from{opacity:.15;transform:translateY(-10px) scaleY(.92);transform-origin:top}to{opacity:1;transform:none}}@keyframes rye-radio-switch{from{transform:translateX(16px);opacity:.3}to{transform:none;opacity:1}}@keyframes rye-radio-swish{from{opacity:1;transform:scale(.3) rotate(-20deg)}to{opacity:0;transform:scale(1.25) rotate(50deg)}}@keyframes rye-radio-drop{0%{transform:translateY(-4px) rotate(-1deg)}55%{transform:translateY(2px) rotate(.5deg)}100%{transform:none}}@keyframes rye-radio-orbit{to{rotate:360deg}}@keyframes rye-radio-float{50%{transform:translateY(-3px)}}
+@container(max-width:540px){#rye-motion .rye-scene{height:283px}#rye-motion .rye-avatar-art{top:53px;left:24%;width:47%;max-width:210px}#rye-motion .rye-avatar-initial{font-size:34cqw}#rye-motion .rye-avatar-stamp{font-size:9px;padding:6px 9px}#rye-motion .rye-avatar-caption{font-size:10px;letter-spacing:3px;bottom:14%}#rye-motion .rye-giant{top:60px;font-size:58cqw;left:-10px}#rye-motion .rye-character-tag{top:240px;bottom:auto;left:5%;font-size:10px}#rye-motion .rye-character-tag span{display:none}#rye-motion .rye-menu-view{padding-top:301px;min-height:0}#rye-motion .rye-menu{margin-top:20px;gap:7px}#rye-motion .rye-spark-a{top:9%;left:10%;font-size:31px}#rye-motion .rye-spark-b{left:80%;top:35%;font-size:42px}#rye-motion .rye-wheat-mark{left:8%;width:32px;bottom:49px}#rye-motion .rye-stage{min-height:0}#rye-motion .rye-destination{min-height:736px;padding-bottom:100px}#rye-motion .rye-radio{left:auto;right:14px;top:225px;width:264px}#rye-motion .rye-radio.is-mini{width:186px}#rye-motion .rye-radio-grip{min-height:42px}#rye-motion .rye-radio-toggle{min-width:44px;min-height:44px}#rye-motion .rye-radio-category{min-height:44px}#rye-motion .rye-radio-header{padding-top:6px}#rye-motion .rye-radio-bottom{font-size:8px}#rye-motion .rye-radio-display{margin-top:11px}}
+</style>
+
+<style>
+/* Shared reduction: visible content, small secondary decoration, no panel grid. */
+#rye-motion .rye-destination{padding:25px 34px 92px;min-height:675px;background:var(--rye-paper)}
+#rye-motion .rye-destination:before{right:-20px;top:0;width:100px;height:110px;background:var(--rye-yellow);clip-path:polygon(30% 0,100% 0,100% 100%,0 70%);transform:none}
+#rye-motion .rye-back{background:transparent;color:var(--rye-blue);padding:10px 0;transform:none;min-height:44px;font-size:12px}
+#rye-motion .rye-page-heading{padding:22px 0 24px;border:0;margin-bottom:6px}
+#rye-motion .rye-page-en{font-size:11px;letter-spacing:2px;line-height:1.5;transform:none;font-weight:800;color:var(--rye-blue)}
+#rye-motion .rye-page-heading h2{font-size:34px;line-height:1.3;margin:7px 0 0;padding:0;background:none;color:var(--rye-ink);transform:none}
+#rye-motion .rye-page-heading h2:after{content:"";display:block;width:42px;height:5px;background:var(--rye-yellow);transform:skewX(-25deg);margin-top:12px}
+#rye-motion .rye-page-number{font-size:55px;top:14px;right:0;opacity:.07}
+#rye-motion .rye-page-content{max-width:none;font-size:16px;line-height:1.95}
+#rye-motion .rye-page-content h3{font-size:22px;line-height:1.55}
+#rye-motion .rye-about-part{position:relative;padding-left:29px;max-width:660px;margin:0 0 34px}
+#rye-motion .rye-about-mark{position:absolute;left:0;top:5px;font-size:11px;line-height:1.8;font-weight:800;color:var(--rye-blue)}
+#rye-motion .rye-about-part h3{margin:0 0 12px}
+#rye-motion .rye-about-part h3 small{font-size:11px;color:var(--rye-blue);display:block;font-weight:500;margin-top:2px}
+#rye-motion .rye-about-part p{margin:0}
+#rye-motion .rye-text-link{background:transparent;border:0;border-bottom:1px solid var(--rye-blue);padding:0 2px;color:var(--rye-blue);min-height:32px;display:inline;font-size:inherit;font-weight:700;line-height:inherit}
+#rye-motion .rye-inline-nav{background:transparent;color:var(--rye-blue);padding:8px 0;min-height:44px;font-size:13px}
+#rye-motion .rye-section-lead{color:var(--rye-ink);font-size:14px;margin:0 0 20px}
+#rye-motion .rye-topic-list{max-width:660px;margin:10px 0}
+#rye-motion .rye-topic{border:0;padding:14px 0;gap:17px;min-height:85px;position:relative}
+#rye-motion .rye-topic:before{content:"";position:absolute;left:30px;right:38px;bottom:8px;height:1px;background:var(--rye-blue);opacity:.12}
+#rye-motion .rye-topic>span{font-size:23px;font-weight:800;line-height:1.4}
+#rye-motion .rye-topic small{display:block;font-size:12px;line-height:1.6;font-weight:400;color:var(--rye-ink);margin-top:4px}
+#rye-motion .rye-topic:hover{background:transparent}
+#rye-motion .rye-topic:hover>span,#rye-motion .rye-topic:focus-visible>span{color:var(--rye-blue)}
+#rye-motion .rye-topic em{opacity:0;transition:opacity .15s,transform .15s;margin-right:8px}
+#rye-motion .rye-topic:hover em,#rye-motion .rye-topic:focus-visible em{opacity:1;transform:translate(2px,-2px)}
+@media(hover:hover) and (pointer:fine){#rye-motion .rye-topic small{opacity:0;transition:opacity .15s}#rye-motion .rye-topic:hover small,#rye-motion .rye-topic:focus-visible small{opacity:1}}
+#rye-motion .rye-article-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:20px}
+#rye-motion .rye-topic-back,#rye-motion .rye-all-topics{background:transparent;color:var(--rye-blue);padding:8px 0;min-height:44px;font-size:12px;margin:0}
+#rye-motion .rye-reading-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:25px}
+#rye-motion .rye-chapter-menu{font-size:12px;line-height:1.7;margin-bottom:4px;align-self:start}
+#rye-motion .rye-chapter-menu summary{cursor:pointer;min-height:44px;padding:10px 0;color:var(--rye-blue)}
+#rye-motion .rye-chapter-menu nav{display:flex;flex-direction:column;gap:2px;padding:0 0 6px}
+#rye-motion .rye-chapter-menu a{min-height:38px;display:block;padding:7px 0;color:var(--rye-ink);text-decoration:none;position:relative}
+#rye-motion .rye-chapter-menu a[aria-current]{color:var(--rye-blue);font-weight:800}
+#rye-motion .rye-chapter-menu a[aria-current]:after{content:" /";color:var(--rye-blue)}
+#rye-motion .rye-reading-article{max-width:680px;min-width:0}
+#rye-motion .note-index{font-size:11px;letter-spacing:1px;color:var(--rye-blue)}
+#rye-motion .rye-reading-article>h2{font-size:26px;line-height:1.5;margin:8px 0 23px}
+#rye-motion .rye-reading-article .note-subsection{margin:32px 0;scroll-margin-top:22px}
+#rye-motion .rye-reading-article .note-subsection h3{font-size:20px;line-height:1.65;margin:0 0 14px}
+#rye-motion .rye-reading-article p{margin:0 0 20px}
+#rye-motion .is-reading .text-links{font-size:13px;margin-top:24px}
+#rye-motion.is-reading-view .rye-page-heading{padding:8px 0 10px;margin:0}
+#rye-motion.is-reading-view .rye-page-heading h2{font-size:16px;margin-top:3px}
+#rye-motion.is-reading-view .rye-page-heading h2:after,#rye-motion.is-reading-view .rye-page-number{display:none}
+#rye-motion.is-reading-view .rye-page-en{font-size:10px}
+#rye-motion .rye-interest-nav{display:flex;flex-wrap:wrap;gap:5px 16px;margin:0 0 24px}
+#rye-motion .rye-interest-nav button{position:relative;background:transparent;padding:7px 0;min-height:44px;color:var(--rye-ink);font-size:14px}
+#rye-motion .rye-interest-nav button[aria-pressed="true"]{color:var(--rye-blue);font-weight:800}
+#rye-motion .rye-interest-nav button[aria-pressed="true"]:after{content:"";position:absolute;left:0;right:0;bottom:5px;height:3px;background:var(--rye-yellow);transform:skewX(-25deg)}
+#rye-motion .rye-page-content .rye-interest-heading{font-size:14px;font-weight:500;color:var(--rye-blue);margin:0 0 12px}
+#rye-motion .rye-work-list{list-style:none;padding:0;margin:0;columns:2;column-gap:38px;max-width:660px}
+#rye-motion .rye-work-list li{break-inside:avoid;padding:10px 0;font-size:17px;line-height:1.6}
+#rye-motion .rye-empty{font-size:14px;padding-top:15px}
+#rye-motion .rye-tools-empty{max-width:530px;padding-top:28px;position:relative}
+#rye-motion .rye-tools-empty>span{font-size:53px;color:var(--rye-blue);line-height:1;display:block;margin-bottom:18px}
+#rye-motion .rye-tools-empty p{font-size:14px}
+#rye-motion .rye-transition.is-running i{animation-duration:.30s}
+#rye-motion .rye-transition.is-running span{animation-duration:.38s}
+@container(min-width:800px){#rye-motion .rye-reading-layout:has(.rye-chapter-menu){grid-template-columns:150px minmax(0,680px);gap:32px}#rye-motion .rye-chapter-menu{position:sticky;top:20px}}
+@container(max-width:540px){#rye-motion .rye-destination{padding:18px 22px 92px;min-height:600px}#rye-motion .rye-page-heading{padding:15px 0 23px}#rye-motion .rye-page-heading h2{font-size:29px}#rye-motion .rye-page-en{font-size:10px;letter-spacing:1.4px;overflow-wrap:normal}#rye-motion .rye-page-number{font-size:45px;top:9px;right:0}#rye-motion .rye-page-content{font-size:16px;line-height:1.9}#rye-motion .rye-about-part{padding-left:0;margin-bottom:29px}#rye-motion .rye-about-mark{position:static;display:block;margin-bottom:4px}#rye-motion .rye-page-content h3{font-size:20px}#rye-motion .rye-topic>span{font-size:22px}#rye-motion .rye-topic em{opacity:1}#rye-motion .rye-reading-article>h2{font-size:23px}#rye-motion .rye-reading-article .note-subsection h3{font-size:19px}#rye-motion .rye-article-actions{gap:10px}#rye-motion .rye-interest-nav{gap:4px 17px}#rye-motion .rye-work-list{columns:1}#rye-motion .rye-work-list li{font-size:17px}#rye-motion .rye-transition.is-running span{font-size:34px}#rye-motion .rye-topic small{opacity:1}}
+</style>
+
+
+<style>
+/* Typography study: readable controls and prose, without enlarging the music object. */
+#rye-motion .rye-edition{font-size:12px;letter-spacing:1px}
+#rye-motion .rye-motion-control{font-size:14px;min-height:44px;padding:10px 12px;white-space:nowrap}
+#rye-motion .rye-kicker{font-size:12px;letter-spacing:1.5px}
+#rye-motion .rye-intro p{font-size:16px;line-height:1.8}
+#rye-motion .rye-menu-label small{font-size:12px;letter-spacing:.8px;line-height:1.55}
+#rye-motion .rye-menu-num{font-size:13px}
+#rye-motion .rye-menu-item{min-height:76px}
+#rye-motion .rye-menu-view{min-height:770px}
+#rye-motion .rye-stage{min-height:770px}
+#rye-motion .rye-selection-note span{font-size:12px}
+#rye-motion .rye-selection-note p{font-size:15px;line-height:1.75}
+#rye-motion .rye-footer{font-size:12px;letter-spacing:.6px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px;gap:8px 16px}
+#rye-motion .rye-footer-hint{font-size:14px}
+#rye-motion .rye-replay{font-size:14px;min-height:44px}
+#rye-motion .rye-avatar-caption{font-size:13px;letter-spacing:2px}
+#rye-motion .rye-avatar-stamp{font-size:12px}
+#rye-motion .rye-back,#rye-motion .rye-topic-back,#rye-motion .rye-all-topics,#rye-motion .rye-inline-nav{font-size:16px}
+#rye-motion .rye-page-en,#rye-motion.is-reading-view .rye-page-en{font-size:12px;letter-spacing:1.4px}
+#rye-motion .rye-page-content{font-size:18px;line-height:1.9}
+#rye-motion .rye-page-content h3{font-size:24px}
+#rye-motion .rye-about-mark{font-size:13px}
+#rye-motion .rye-about-part h3 small{font-size:14px}
+#rye-motion .rye-section-lead{font-size:16px;line-height:1.8}
+#rye-motion .rye-topic b{font-size:14px}
+#rye-motion .rye-topic>span{min-width:0}
+#rye-motion .rye-topic small{font-size:15px;line-height:1.75}
+#rye-motion .rye-chapter-menu{font-size:15px;line-height:1.8}
+#rye-motion .rye-chapter-menu a{overflow-wrap:anywhere}
+#rye-motion .note-index{font-size:13px}
+#rye-motion .rye-reading-article>h2{font-size:28px}
+#rye-motion .rye-reading-article .note-subsection h3{font-size:22px}
+#rye-motion .rye-reading-article p{margin-bottom:24px}
+#rye-motion .is-reading .text-links{font-size:16px}
+#rye-motion.is-reading-view .rye-page-heading h2{font-size:18px}
+#rye-motion .rye-interest-nav button{font-size:17px}
+#rye-motion .rye-page-content .rye-interest-heading{font-size:16px}
+#rye-motion .rye-work-list li{font-size:18px}
+#rye-motion .rye-empty,#rye-motion .rye-tools-empty p{font-size:17px}
+#rye-motion .rye-sound-caption strong{font-size:14px}
+#rye-motion .rye-sound-caption small{font-size:13px}
+@container(min-width:800px){
+ #rye-motion .rye-reading-layout:has(.rye-chapter-menu){grid-template-columns:180px minmax(0,680px)}
+}
+@container(max-width:650px){
+ #rye-motion .rye-edition{max-width:150px;font-size:12px;line-height:1.5;letter-spacing:.4px}
+ #rye-motion .rye-footer-hint{display:none}
+}
+@container(max-width:540px){
+ #rye-motion .rye-chrome{gap:12px;justify-content:space-between}
+ #rye-motion .rye-edition{display:none}
+ #rye-motion .rye-motion-control{font-size:14px}
+ #rye-motion .rye-stage{min-height:0}
+ #rye-motion .rye-menu-view{min-height:0;padding-left:22px;padding-right:22px}
+ #rye-motion .rye-intro p{font-size:16px}
+ #rye-motion .rye-menu-item{min-height:80px;padding-right:12px}
+ #rye-motion .rye-menu-label small{font-size:12px;letter-spacing:.5px}
+ #rye-motion .rye-menu-num{font-size:13px}
+ #rye-motion .rye-footer{font-size:12px;gap:0 12px;padding:8px 16px}
+ #rye-motion .rye-replay{font-size:14px}
+ #rye-motion .rye-avatar-caption{font-size:13px;letter-spacing:2px}
+ #rye-motion .rye-avatar-stamp{font-size:12px;padding:6px 9px;letter-spacing:.5px}
+ #rye-motion .rye-page-content{font-size:17px;line-height:1.9}
+ #rye-motion .rye-page-content h3{font-size:22px}
+ #rye-motion .rye-reading-article>h2{font-size:25px}
+ #rye-motion .rye-reading-article .note-subsection h3{font-size:21px}
+ #rye-motion .rye-work-list li{font-size:18px}
+ #rye-motion .rye-article-actions{flex-wrap:wrap;justify-content:flex-start;column-gap:24px;row-gap:0}
+ #rye-motion .rye-topic-back,#rye-motion .rye-all-topics{font-size:15px}
+ #rye-motion .rye-interest-nav{gap:6px 20px}
+ #rye-motion .rye-interest-nav button{font-size:17px}
+}
+</style>
+
+
+<style>
+/* Return controls have their own visible symbol and comfortable target. */
+#rye-motion .rye-back,#rye-motion .rye-topic-back{
+ display:inline-flex;align-items:center;gap:12px;min-height:56px;
+ padding:8px 14px 8px 4px;font-size:18px;font-weight:700;line-height:1.5;
+ color:var(--rye-ink);background:transparent;max-width:100%;text-align:left;
+}
+#rye-motion .rye-back{margin-bottom:8px}
+#rye-motion .rye-return-mark{
+ flex:0 0 40px;width:40px;height:40px;display:grid;place-items:center;
+ position:relative;isolation:isolate;color:var(--rye-blue);
+}
+#rye-motion .rye-return-mark:before{
+ content:"";position:absolute;inset:1px;background:var(--rye-yellow);
+ clip-path:polygon(12% 4%,100% 0,90% 85%,0 100%);z-index:-1;
+ transition:transform .16s;
+}
+#rye-motion .rye-return-mark svg{
+ display:block;width:28px;height:28px;fill:none;stroke:currentColor;
+ stroke-width:3;stroke-linecap:square;stroke-linejoin:miter;transition:transform .16s;
+}
+#rye-motion .rye-back:hover .rye-return-mark svg,
+#rye-motion .rye-topic-back:hover .rye-return-mark svg{transform:translateX(-3px)}
+#rye-motion .rye-back:hover .rye-return-mark:before,
+#rye-motion .rye-topic-back:hover .rye-return-mark:before{transform:rotate(-6deg)}
+#rye-motion .rye-back:active .rye-return-mark svg,
+#rye-motion .rye-topic-back:active .rye-return-mark svg{transform:translateX(-2px) scale(.94)}
+#rye-motion .rye-article-actions{gap:12px 24px;margin:4px 0 26px;flex-wrap:wrap}
+#rye-motion .rye-all-topics{font-size:17px;min-height:52px;padding:10px 4px}
+@container(max-width:540px){
+ #rye-motion .rye-back,#rye-motion .rye-topic-back{font-size:18px;min-height:56px;gap:10px;padding-right:8px}
+ #rye-motion .rye-article-actions{gap:8px 20px}
+ #rye-motion .rye-all-topics{font-size:17px}
+}
+</style>
+
+<script>
+(()=>{
+ const root=document.getElementById('rye-motion');
+ const menu=root.querySelector('.rye-menu-view'),destination=root.querySelector('.rye-destination'),items=[...root.querySelectorAll('.rye-menu-item')];
+ const content=root.querySelector('.rye-page-content'),wipe=root.querySelector('.rye-transition'),burst=root.querySelector('.rye-burst'),motionButton=root.querySelector('.rye-motion-control');
+ const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
+ let selected=0,busy=false,motion=!reduced.matches,topicOrigin=null,introTimer,pageTimer,currentTopic=null,topicTrail=[],activeInterest=0,chapterObserver;
+ const sections=[
+  {title:'关于我',en:'ABOUT ME',note:'一段关于迷茫、选择和行动的自我介绍。'},
+  {title:'行动与思考',en:'TRY / THINK',note:'认知、环境、房子、工作与恋爱关系，分开阅读。'},
+  {title:'兴趣宇宙',en:'OTHER WORLDS',note:'故事、作品，还有那些尚未探索的兴趣。'},
+
+  {title:'工具与项目',en:'MAKE / SHARE',note:'用 AI 和工具，把想法带到现实里。'}
+ ];
+ const topics=[{"id":"cognition","title":"认知","note":"几个容易听懂，却不容易内化的想法","html":"\n              <span class=\"note-index\">01 / 认知</span>\n              <h2>几个容易听懂，却不容易内化的想法</h2>\n              <p>大三的时候，开始走此前没准备过的游戏策划路线。看了课代表立正不少视频和课程，其中几个想法对当时的我起了作用：拥抱不确定性、成长型思维、主体思维、行动引领思考。</p>\n              <p>这些东西很容易听懂，但碰到自己的事，还是不容易用上。</p>\n              <section class=\"note-subsection\" id=\"cognition-uncertainty\" aria-labelledby=\"cognition-uncertainty-title\">\n                <h3 id=\"cognition-uncertainty-title\">拥抱不确定性：宝藏在迷雾中</h3>\n                <p>学生时代，考什么、学什么，大多有人告诉我们。从中小学开始，一直在考试中获得成绩，好像只要埋头读书就可以了。习惯了有考题、有范围，也有比较明确的评价。</p>\n                <p>但到了社会，没有人会给你出考题，得自己去找。想做什么、往哪走，也没有一个标准答案。</p>\n                <p>宝藏在迷雾中。有些机会，开始尝试以后才看得见。读《伟大为什么不能被计划》时，里面关于计划的讨论，也让我重新想了想这件事。</p>\n                <p>就拿这个网站来说。没做过并上线过网站，不知道能不能用 AI 做出符合我品味的动画和交互，也不知道最后能带来什么确定的东西。或许大家根本不想认识我，或许我的经验无法帮助任何人。有一万个理由否定做个人网站的想法。</p>\n                <p>网站就是在这些问题还没有答案的时候，开始做的。</p>\n              </section>\n              <section class=\"note-subsection\" id=\"cognition-growth\" aria-labelledby=\"cognition-growth-title\">\n                <h3 id=\"cognition-growth-title\">成长型思维：现在不会，还可以学</h3>\n                <p>当时不清楚游戏策划要做什么，只有不到一年就要实习了，换方向怎么看都有点晚。如果觉得能力就这样了，学不了多少东西，那这条路根本不会去走。</p>\n                <p>《刻意练习》让我关注到，学习也有方法。不会的东西，可以拆开练，可以找反馈，再改。现在做不到和以后学不会，中间还隔着一个学习的过程。</p>\n                <p>关注付出，也关注这次到底学到了什么。一次结果不好，可能有很多原因，至少不用立刻变成“我就是不行”。练了没变化，也得看看方法有没有问题。</p>\n                <p>遇到挑战时，注意力能放到能学到什么上面，很多事情才有继续尝试的空间。</p>\n              </section>\n              <section class=\"note-subsection\" id=\"cognition-agency\" aria-labelledby=\"cognition-agency-title\">\n                <h3 id=\"cognition-agency-title\">主体思维：选择还是得自己来做</h3>\n                <p>老师讲过十几年前计算机专业的就业机会，再看现在，已经是另一回事。环境会变，选了一个当时看起来不错的专业，也保证不了以后的路。</p>\n                <p>环境不好会影响机会，这个影响确实存在。但如果一直停在抱怨上，等社会环境变好，自己能做的事也就一直没做。</p>\n                <p>以前想做什么，学校、家长都会告诉我们该怎么选。习惯了听安排，后来连需要自己判断的东西，也一起交出去了。</p>\n                <p>可最后，做这份工作、过这种生活的，还是自己。建议可以听，选择还是得自己来做。</p>\n                <p>大三转向游戏策划，就是开始走自己的路。和周围一些人的方向不一样，当时也没法证明这一定是个好选择。</p>\n              </section>\n              <section class=\"note-subsection\" id=\"cognition-action\" aria-labelledby=\"cognition-action-title\">\n                <h3 id=\"cognition-action-title\">行动引领思考：有些东西，做了才知道</h3>\n                <p>网站最后能做成什么样，大家会不会喜欢，光想很难有答案。代码能呈现什么效果，AI 能帮到什么程度，也得实际用起来才能了解。</p>\n                <p>有了能看的版本，喜欢哪里、不喜欢哪里，才有具体的东西可以讨论。想法也会跟着变，原来没想到的问题会冒出来。</p>\n                <p>很多思考需要这些实际接触到的东西。一直没开始，就只能围着原来的想象打转。</p>\n              </section>\n              <section class=\"note-subsection\" id=\"cognition-learning\" aria-labelledby=\"cognition-learning-title\">\n                <h3 id=\"cognition-learning-title\">想获得想要的成果，就去找已经获得成果的人学习</h3>\n                <p>有些东西，不用全靠自己从头摸索。已经有人走过这条路，做出过成果，可以看看他们具体做了什么，哪些地方值得学。</p>\n                <p>只看结果，很容易觉得对方厉害、自己做不到。再往前看一点，才有可能看到那些能学的东西。</p>\n                <p>当然，起点、条件、时机都可能不一样。能学到做法，不代表能复制结果。</p>\n              </section>\n              <p>最后打个预防针，事物是很多维的，这里只摘了一部分对我比较重要的东西。也还在慢慢内化，有想讨论的可以联系我。</p>\n            ","chapters":[{"id":"cognition-uncertainty","name":"拥抱不确定性"},{"id":"cognition-growth","name":"成长型思维"},{"id":"cognition-agency","name":"主体思维"},{"id":"cognition-action","name":"行动引领思考"},{"id":"cognition-learning","name":"向有成果的人学习"}]},{"id":"environment","title":"环境","note":"过去的自己，也和过去的环境有关","html":"\n              <span class=\"note-index\">02 / 环境</span><h2>过去的自己，也和过去的环境有关</h2>\n              <section class=\"note-subsection\" id=\"environment-scope\" aria-labelledby=\"environment-scope-title\">\n                <h3 id=\"environment-scope-title\">环境包括什么</h3>\n                <p>环境可以是物理的。身边放着一大袋零食，就会想吃；房间太乱，就会心烦。</p>\n                <p>也可以是一本书。读过《刻意练习》，会更相信人可以成长。</p>\n                <p>也可以是身边和网络上的人。室友考研，自己也更可能考研；室友喜欢游戏，自己也更可能喜欢游戏。朋友会乐器，会想学；朋友会跳舞，也会想试试。</p>\n              </section>\n              <section class=\"note-subsection\" id=\"environment-experience\" aria-labelledby=\"environment-experience-title\">\n                <h3 id=\"environment-experience-title\">没做过，不一定是不喜欢</h3>\n                <p>钱不够的时候，付费社交、穿搭、自我投资，很多事可能根本不在考虑范围里。时间、机会、身边有没有人一起，也都影响能接触到什么。</p>\n                <p>没尝试过，和尝试以后发现不喜欢，是两回事。以前觉得自己不需要、不在意的东西，也可能只是当时没有条件接触。</p>\n                <p>环境不仅影响能做什么，也影响拿什么经历来认识自己。</p>\n              </section>\n              <section class=\"note-subsection\" id=\"environment-people\" aria-labelledby=\"environment-people-title\">\n                <h3 id=\"environment-people-title\">换一群人，能看见不同的路</h3>\n                <p>大学时，周围有准备考公考研的同学，也看到了已经获得游戏实习的同学。游戏行业原来已经有人进去了，这条路就在身边。</p>\n                <p>后来减少了和方向不同的同学的接触，开始走自己的路。接触什么人、看到什么信息，会影响觉得什么事情是可能的。</p>\n                <p>环境还会影响表现出来的样子。在熟悉的人面前话很多，在陌生人面前沉默，可能和安全感、有没有共同话题有关。换一群人，表现也可能不一样。</p>\n                <p>过去的行为发生在过去的环境里，不能只凭这些就把自己定死。</p>\n              </section>\n              <section class=\"note-subsection\" id=\"environment-performance\" aria-labelledby=\"environment-performance-title\">\n                <h3 id=\"environment-performance-title\">一次表现，说明不了全部</h3>\n                <p>在一个团队里做得不好，可能有能力和经验的问题，也可能和任务、协作方式、资源有关。换个环境不一定全解决，留下来继续努力也不一定都能解决。</p>\n                <p>工作里具体哪件事不会做，什么地方没沟通好，哪些条件一直缺着，得分开看。直接归成“我能力不行”，或者全归成“环境太差”，很多东西就看不见了。</p>\n                <p>提升自己和寻找合适的环境，可以同时考虑。不用先把当前环境里的所有问题都解决，才有资格想别的可能。</p>\n              </section>\n              <section class=\"note-subsection\" id=\"environment-social\" aria-labelledby=\"environment-social-title\">\n                <h3 id=\"environment-social-title\">最近的社交尝试</h3>\n                <p>想要什么，选择或改变环境很重要。</p>\n                <p>我不擅长社交，所以现在开始更多地展示自己，参加活动。</p>\n                <p>这四个月，除了一个人探店、观展，还参加了三次陌生人聚餐、多次桌游、两次徒步爬山，跟别人去了一次动物园，试了一次简单的 cos。只用周末，就做了不少以前没试过的事。</p>\n                <p>做这个网站，也是想让更多人认识我，认识些学校和工作以外的人。</p>\n              </section>\n            ","chapters":[{"id":"environment-scope","name":"环境包括什么"},{"id":"environment-experience","name":"没做过，不一定是不喜欢"},{"id":"environment-people","name":"换一群人，能看见不同的路"},{"id":"environment-performance","name":"一次表现，说明不了全部"},{"id":"environment-social","name":"最近的社交尝试"}]},{"id":"home","title":"房子","note":"想住在什么样的地方","html":"\n              <span class=\"note-index\">03 / 房子</span><h2>想住在什么样的地方</h2>\n              <p>住过这些地方，现在比较在意阳光、卫生和自己的空间。但一个人住久了，也会想有人陪。</p>\n              <section class=\"note-subsection\" id=\"home-childhood\" aria-labelledby=\"home-childhood-title\">\n                <h3 id=\"home-childhood-title\">小时候的平房</h3>\n                <p>小时候住在很大的平房里，爷爷奶奶也一起住。外面有菜园，远一点有池塘和玩耍的地方，邻居家的几个孩子可以一起玩。</p>\n                <p>活动空间大，也自由，还能养猫。家里人挤在一起，但很温馨。</p>\n              </section>\n              <section class=\"note-subsection\" id=\"home-family\" aria-labelledby=\"home-family-title\">\n                <h3 id=\"home-family-title\">后来的两个家</h3>\n                <p>上小学时，平房拆迁了。算上家里买的一套房，一共有两套。</p>\n                <p>住得最久的是六楼那套，从小学一年级一直到后来高中、大学住宿。小时候爬楼不算太辛苦。外面能玩的地方少了，但住起来比平房舒服。</p>\n                <p>家里三个孩子，我和哥哥一个房间，能一起玩游戏，但有时候没什么隐私。</p>\n                <p>隔一面墙就是学校，早上有时很吵，但看着学生的样子，又觉得很有能量。这是我记忆最多的家。</p>\n                <p>另一套在二楼，主要是爷爷奶奶住，空间比较开阔。经常有亲戚串门，玩电脑也不会有我妈在旁边给压力。不过亲戚偶尔见见还好，总是接触，也不是很喜欢。</p>\n              </section>\n              <section class=\"note-subsection\" id=\"home-dormitory\" aria-labelledby=\"home-dormitory-title\">\n                <h3 id=\"home-dormitory-title\">高中和大学宿舍</h3>\n                <p>高中宿舍条件一般。集体生活压力比较大，没自己的空间。不过能约人跑步、打羽毛球、去图书馆，也有一些有趣的事。</p>\n                <p>大学宿舍也差不多，住得舒不舒服，很看室友。高中大家主要学习、运动，大学更自由，但有些室友晚上很吵，也不爱卫生。吐槽一下，大学四年的厕所基本都是我在洗。</p>\n              </section>\n              <section class=\"note-subsection\" id=\"home-renting\" aria-labelledby=\"home-renting-title\">\n                <h3 id=\"home-renting-title\">两次租房</h3>\n                <p>第一次租在城中村，住了五个月。第一次租房没注意采光，虽然早上一般不在家，但还是不喜欢屋里太暗。</p>\n                <p>刚开始一个人住还好，后来会孤独，尤其生病没人照顾的时候。有时听到楼下情侣说话，还会有点羡慕。</p>\n                <p>现在的房子阳光很足，也有地方养花。一个人住很自由，但很多时候太安静，反而更觉得孤独。</p>\n              </section>\n            ","chapters":[{"id":"home-childhood","name":"小时候的平房"},{"id":"home-family","name":"后来的两个家"},{"id":"home-dormitory","name":"高中和大学宿舍"},{"id":"home-renting","name":"两次租房"}]},{"id":"work","title":"工作","note":"游戏策划、做家教","html":"\n              <span class=\"note-index\">04 / 工作</span><h2>工作</h2>\n              <section class=\"note-subsection\" id=\"work-game-planning\" aria-labelledby=\"work-game-planning-title\">\n                <h3 id=\"work-game-planning-title\">游戏策划</h3>\n                <p>现在做游戏策划，日常要写活动、系统策划案，配表，提人物皮肤美术需求、技能特效需求。也有很多时间在和不同岗位的人沟通、开会。</p>\n                <p>比较喜欢人物美术和技能特效需求这部分。可以从以前喜欢的作品里找灵感，还挺爽的。</p>\n                <p>工作后也犯过一些错，特别是需要别人帮我善后的时候，会比较难受。</p>\n                <p>不喜欢的地方也有，有些可能和环境有关。这里可能会被熟人看到，就不展开了。感兴趣可以直接找我聊。</p>\n                <p>以后也想找机会做副业。</p>\n              </section>\n              <section class=\"note-subsection\" id=\"work-tutoring\" aria-labelledby=\"work-tutoring-title\">\n                <h3 id=\"work-tutoring-title\">做家教</h3>\n                <p>大二想赚点钱，去做了家教。教一个初一男生数学，一小时 60 元，周末教两小时。</p>\n                <p>人挺乖的，但教起来没那么容易。把题拆得很细，也试过类比这些方法，还是没能很好地教会他。当时讲完会做，过几十分钟又不会了。现在回头看，应该还可以多试些教法。</p>\n                <p>后来生病，又赶上期末，就匆忙结束了。觉得自己以后应该不会当老师，也就没想着继续做家教。算是一次不错的经历。</p>\n              </section>\n              <div class=\"text-links\"><button type=\"button\" class=\"rye-text-link\" data-topic=\"1\" data-chapter=\"experience\">环境如何影响尝试？ <span aria-hidden=\"true\">↗</span></button></div>\n            ","chapters":[{"id":"work-game-planning","name":"游戏策划"},{"id":"work-tutoring","name":"做家教"}]},{"id":"relationship","title":"恋爱关系","note":"想法与改变","html":"\n              <span class=\"note-index\">05 / 恋爱关系</span><h2>恋爱</h2>\n              <p>工作以前很少想谈恋爱。升学、找工作，加上自己的兴趣，已经挺充实了。工作稳定些以后，加上生病时的孤独感，才开始想认识一个特别的人。到现在四个多月。</p>\n              <p>我的恋爱观比较理想，也比较纯爱。但容易考虑太多，还没怎么相处，就先有了很多判断和结论。现在也在学怎么和女生自然相处、倾听，保持自己的主体性，提高自己的价值。</p>\n              <p>以前不怎么发朋友圈，担心隐私、被比较。但不展示，别人也少了一个了解我的机会。现在开始每周分享一些生活。</p>\n              <p>也发现自己会喜欢好看一些的女生，所以自己也开始健身，研究穿搭、发型。还没到满意的状态，但有在改变。</p>\n              <p>和不同的人交流后，原来的一些想法变了。没有完全认同别人的看法，但确实很有价值。</p>\n              <p>到现在有遇到过有好感的女生，但还没谈上恋爱。或许四个多月还太短，还有好多东西要学。具体经历不在这里写，想聊的可以联系我。</p>\n            ","chapters":[]}];
+ const interests=[{"label":"番剧","heading":"最喜欢的一些番剧","items":["物语系列","CLANNAD","心理测量者","狼与香辛料","反叛的鲁路修","轻音少女","排球少年","三月的狮子","来自深渊","暗杀教室","FLCL（特别的她）","葬送的芙莉莲","血界战线","冰菓","龙与虎","宝石之国","漂流少年","Angel Beats!","xxxHOLiC"]},{"label":"游戏","heading":"玩过的一部分游戏","items":["八方旅人","最终幻想7","女神异闻录5","鸣潮","英雄联盟","杀戮尖塔"]},{"label":"电影","heading":"喜欢、也推荐的电影","items":["海上钢琴师","怦然心动","黑天鹅","银翼杀手","天堂电影院","天使爱美丽","飞越疯人院","死亡诗社","爱乐之城","楚门的世界"]},{"label":"书","heading":"提到过的两本书","items":["麦田里的守望者","伟大为什么不能被计划"]},{"label":"待探索","heading":"还想试试什么","items":[]}];
+ const aboutMarkup="<section class=\"rye-about-part\"><span class=\"rye-about-mark\">01</span>\n              <h3>开始走自己的路</h3>\n              <p>双非本科，读着并不热衷的软件工程，也担心未来的工作会被 AI 替代。后来，我开始改变<button type=\"button\" class=\"rye-text-link\" data-topic=\"0\">认知<span aria-hidden=\"true\">↗</span></button>和<button type=\"button\" class=\"rye-text-link\" data-topic=\"1\">环境<span aria-hidden=\"true\">↗</span></button>，朝游戏策划的方向行动，拿到了实习机会，如今已经转正。</p>\n            </section><section class=\"rye-about-part\"><span class=\"rye-about-mark\">02</span>\n              <h3>重新认识自己<small>Know Yourself</small></h3>\n              <p>我是真的不喜欢，还是还没试过？为了重新找回幸福感，我开始走出去，认识不同的人，也重新探索自己想住的<button type=\"button\" class=\"rye-text-link\" data-topic=\"2\">房子<span aria-hidden=\"true\">↗</span></button>、想做的<button type=\"button\" class=\"rye-text-link\" data-topic=\"3\">工作<span aria-hidden=\"true\">↗</span></button>和期待的<button type=\"button\" class=\"rye-text-link\" data-topic=\"4\">恋爱关系<span aria-hidden=\"true\">↗</span></button>。有些答案，我想在生活里慢慢找到。</p>\n            </section><section class=\"rye-about-part\"><span class=\"rye-about-mark\">03</span>\n              <h3>也想和你聊聊喜欢的作品</h3>\n              <p>电影、番剧、音乐、游戏和书，占据了我不少空闲时间。如果你也喜欢其中的某部作品，我们或许就有了聊天的开场。</p>\n              \n            <button type=\"button\" class=\"rye-inline-nav\" data-section=\"2\">看看我的兴趣 ↗</button></section>";
+ const topicButtons=()=>'<div class="rye-topic-list">'+topics.map((t,i)=>'<button type="button" class="rye-topic" data-topic="'+i+'"><b>0'+(i+1)+'</b><span>'+t.title+'<small>'+t.note+'</small></span><em aria-hidden="true">↗</em></button>').join('')+'</div>';
+ function stopReading(){chapterObserver?.disconnect();chapterObserver=null;currentTopic=null;content.classList.remove('is-reading');root.classList.remove('is-reading-view');}
+ function renderInterests(){
+  const g=interests[activeInterest];
+  content.innerHTML='<nav class="rye-interest-nav" aria-label="兴趣类别">'+interests.map((v,i)=>'<button type="button" data-interest="'+i+'" aria-pressed="'+(i===activeInterest)+'">'+v.label+'</button>').join('')+'</nav><h3 class="rye-interest-heading">'+g.heading+'</h3>'+(g.items.length?'<ul class="rye-work-list">'+g.items.map(v=>'<li>'+v+'</li>').join('')+'</ul>':'<p class="rye-empty">还在探索，暂时没有整理成清单。</p>');
+ }
+ function renderSection(index){
+  stopReading();topicOrigin=null;topicTrail=[];
+  root.querySelector('.rye-page-en').textContent=sections[index].en;
+  root.querySelector('.rye-page-heading h2').textContent=sections[index].title;
+  root.querySelector('.rye-page-number').textContent='0'+(index+1);
+  if(index===0)content.innerHTML=aboutMarkup;
+  if(index===1)content.innerHTML='<p class="rye-section-lead">认识自己的过程。</p>'+topicButtons();
+  if(index===2)renderInterests();
+  if(index===3)content.innerHTML='<p class="rye-section-lead">用 AI 和工具，把想法带到现实里。</p><div class="rye-tools-empty"><span aria-hidden="true">↗</span><h3>内容整理中。</h3><p>实践过的工具和项目，会慢慢放到这里。</p></div>';
+ }
+ function pageEntrance(){clearTimeout(pageTimer);root.classList.remove('is-page-entering');requestAnimationFrame(()=>{root.classList.add('is-page-entering');pageTimer=setTimeout(()=>root.classList.remove('is-page-entering'),650)});}
+ function select(index){if(busy)return;selected=index;root.dataset.selection=String(index);items.forEach((item,i)=>{item.classList.toggle('is-current',i===index);if(i===index)item.setAttribute('aria-current','true');else item.removeAttribute('aria-current')});root.querySelector('.rye-selection-note span').textContent='0'+(index+1)+' / 04';root.querySelector('.rye-selection-note p').textContent=sections[index].note;}
+ function transition(change,returning=false,focusTarget){if(busy)return;busy=true;root.setAttribute('aria-busy','true');root.classList.toggle('is-returning',returning);wipe.querySelector('span').textContent=returning?'WELCOME BACK.':sections[selected].en;const duration=motion&&!reduced.matches?380:0;wipe.classList.add('is-running');setTimeout(()=>{change();pageEntrance();},duration?150:0);setTimeout(()=>{wipe.classList.remove('is-running');root.classList.remove('is-returning');busy=false;root.removeAttribute('aria-busy');focusTarget?.focus();},duration);}
+ function openSection(index,event){if(busy)return;select(index);if(motion&&event){const rect=root.querySelector('.rye-stage').getBoundingClientRect();const b=event.currentTarget.getBoundingClientRect();burst.style.left=(b.left+b.width*.77-rect.left)+'px';burst.style.top=(b.top+b.height/2-rect.top)+'px';burst.classList.remove('is-bursting');void burst.offsetWidth;burst.classList.add('is-bursting');}transition(()=>{renderSection(index);menu.hidden=true;destination.hidden=false;root.dataset.view='section';root.dispatchEvent(new CustomEvent('rye-viewchange',{detail:'section'}));},false,root.querySelector('.rye-back'));}
+ items.forEach((item,i)=>{item.style.setProperty('--rye-order',i);item.addEventListener('pointerenter',e=>{if(e.pointerType!=='touch')select(i)});item.addEventListener('focus',()=>select(i));item.addEventListener('click',e=>openSection(i,e));item.addEventListener('keydown',e=>{let target;if(e.key==='ArrowDown')target=(i+1)%items.length;if(e.key==='ArrowUp')target=(i+items.length-1)%items.length;if(target!==undefined){e.preventDefault();items[target].focus()}})});
+ function backToMenu(){transition(()=>{destination.hidden=true;menu.hidden=false;root.dataset.view='menu';root.dispatchEvent(new CustomEvent('rye-viewchange',{detail:'menu'}));},true,items[selected]);}
+ root.querySelector('.rye-back').addEventListener('click',backToMenu);
+ function renderArticle(index){
+  chapterObserver?.disconnect();currentTopic=index;content.classList.add('is-reading');root.classList.add('is-reading-view');
+  const t=topics[index],hasChapters=t.chapters.length>1;
+  content.innerHTML='<div class="rye-article-actions"><button type="button" class="rye-topic-back"><span class="rye-return-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M26 16H6m10-10L6 16l10 10"/></svg></span><span>'+(topicTrail.length?'返回上一篇':selected===0?'返回自我介绍':'返回主题目录')+'</span></button><button type="button" class="rye-all-topics">全部主题 ↗</button></div><div class="rye-reading-layout">'+(hasChapters?'<details class="rye-chapter-menu"'+(root.clientWidth>=800?' open':'')+'><summary>本篇目录 · '+t.chapters.length+' 节</summary><nav aria-label="本篇目录">'+t.chapters.map(c=>'<a href="#'+c.id+'" data-jump="'+c.id+'">'+c.name+'</a>').join('')+'</nav></details>':'')+'<article class="rye-reading-article">'+t.html+'</article></div>';
+  if(hasChapters){chapterObserver=new IntersectionObserver(entries=>{const visible=entries.filter(e=>e.isIntersecting).sort((a,b)=>a.boundingClientRect.top-b.boundingClientRect.top)[0];if(visible)content.querySelectorAll('[data-jump]').forEach(a=>{if(a.dataset.jump===visible.target.id)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});},{rootMargin:'-5% 0px -55% 0px'});content.querySelectorAll('.note-subsection').forEach(el=>chapterObserver.observe(el));}
+ }
+ function showTopic(index,origin,chapter){
+  if(currentTopic!==null)topicTrail.push({index:currentTopic,origin});
+  else topicOrigin=origin;
+  renderArticle(index);pageEntrance();content.querySelector('.rye-topic-back').focus();
+  if(chapter)content.querySelector('[id="'+topics[index].id+'-'+chapter+'"]')?.scrollIntoView({block:'start'});
+ }
+ function returnTopic(){
+  if(topicTrail.length){const previous=topicTrail.pop();renderArticle(previous.index);pageEntrance();content.querySelector('[data-topic="'+previous.origin+'"]')?.focus();return;}
+  const restore=topicOrigin;renderSection(selected);pageEntrance();content.querySelector('[data-topic="'+restore+'"]')?.focus();
+ }
+ content.addEventListener('click',e=>{
+  const trigger=e.target.closest('[data-topic]');if(trigger){showTopic(Number(trigger.dataset.topic),trigger.dataset.topic,trigger.dataset.chapter);return;}
+  if(e.target.closest('.rye-topic-back')){returnTopic();return;}
+  if(e.target.closest('.rye-all-topics')){selected=1;renderSection(1);pageEntrance();content.querySelector('.rye-topic')?.focus();return;}
+  const interestButton=e.target.closest('[data-interest]');if(interestButton){activeInterest=Number(interestButton.dataset.interest);renderInterests();content.querySelector('[data-interest="'+activeInterest+'"]').focus({preventScroll:true});return;}
+  const jump=e.target.closest('[data-jump]');if(jump){e.preventDefault();const target=content.querySelector('[id="'+jump.dataset.jump+'"]');if(root.clientWidth<800)content.querySelector('.rye-chapter-menu').open=false;target?.scrollIntoView({block:'start',behavior:'auto'});return;}
+  const sectionButton=e.target.closest('[data-section]');if(sectionButton){selected=Number(sectionButton.dataset.section);renderSection(selected);pageEntrance();root.querySelector('.rye-back').focus();}
+ });
+ root.addEventListener('keydown',e=>{if(e.key==='Escape'&&!destination.hidden&&!busy){e.preventDefault();const back=content.querySelector('.rye-topic-back');if(back)back.click();else backToMenu();}});
+ function setMotion(on){motion=on&&!reduced.matches;root.classList.toggle('is-still',!motion);root.classList.toggle('is-ambient',motion);motionButton.setAttribute('aria-pressed',String(motion));motionButton.textContent=motion?'动效 ON':'动效 OFF';}
+ motionButton.addEventListener('click',()=>setMotion(!motion));reduced.addEventListener('change',()=>setMotion(!reduced.matches));
+ function entrance(){clearTimeout(introTimer);root.classList.remove('is-entering');requestAnimationFrame(()=>{root.classList.add('is-entering');introTimer=setTimeout(()=>root.classList.remove('is-entering'),1100)})}
+ root.querySelector('.rye-replay').addEventListener('click',()=>{if(busy)return;if(!menu.hidden)entrance();else pageEntrance();});setMotion(motion);entrance();
+})();
+</script>
+<script>
+(()=>{
+ const root=document.getElementById('rye-motion'),stage=root.querySelector('.rye-stage'),sound=root.querySelector('.rye-sound');
+ const disc=sound.querySelector('.rye-sound-disc'),options=sound.querySelector('.rye-sound-options'),caption=sound.querySelector('.rye-sound-caption strong'),modes=[...sound.querySelectorAll('.rye-sound-mode')];
+ const names={vocal:'人间电台',instrumental:'无词漫游'};
+ let kind='vocal',position={x:24,y:575},moved=false,hovered=false,keyboard=false,keyNavigation=false,latched=false,opened=false,drag=null,skipClickUntil=0,closeTimer,switchTimer,saved=null;
+ const fine=()=>matchMedia('(hover:hover) and (pointer:fine)').matches;
+ function setOpen(value){opened=value;sound.classList.toggle('is-open',value);options.inert=!value;options.setAttribute('aria-hidden',String(!value));disc.setAttribute('aria-expanded',String(value));}
+ function sync(){setOpen(!drag?.active&&(hovered||keyboard||latched));}
+ function close(){clearTimeout(closeTimer);hovered=false;keyboard=false;latched=false;setOpen(false);}
+ function place(x,y){position={x:Math.max(12,Math.min(x,stage.clientWidth-60)),y:Math.max(12,Math.min(y,stage.clientHeight-60))};sound.style.left=position.x+'px';sound.style.top=position.y+'px';sound.classList.toggle('opens-left',position.x>stage.clientWidth-176);sound.classList.toggle('opens-down',position.y<110);}
+ function home(){return root.clientWidth<=540?{x:20,y:224}:{x:24,y:stage.clientHeight-74};}
+ sound.addEventListener('pointerenter',e=>{if(e.pointerType==='touch'||!fine())return;clearTimeout(closeTimer);hovered=true;sync();});
+ sound.addEventListener('pointerleave',()=>{clearTimeout(closeTimer);closeTimer=setTimeout(()=>{hovered=false;sync();},220);});
+ sound.addEventListener('focusin',()=>{if(keyNavigation){keyboard=true;sync();}});
+ sound.addEventListener('focusout',()=>{queueMicrotask(()=>{if(!sound.contains(document.activeElement)){keyboard=false;sync();}});});
+ disc.addEventListener('click',()=>{if(performance.now()<skipClickUntil)return;latched=!latched;if(!latched)hovered=false;sync();});
+ function select(next){if(next===kind)return;kind=next;sound.dataset.kind=kind;caption.textContent=names[kind];modes.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.kind===kind)));clearTimeout(switchTimer);sound.classList.remove('is-switching');requestAnimationFrame(()=>{sound.classList.add('is-switching');switchTimer=setTimeout(()=>sound.classList.remove('is-switching'),260);});}
+ modes.forEach((b,i)=>{b.addEventListener('click',()=>select(b.dataset.kind));b.addEventListener('pointerenter',()=>caption.textContent=names[b.dataset.kind]);b.addEventListener('pointerleave',()=>caption.textContent=names[kind]);b.addEventListener('focus',()=>caption.textContent=names[b.dataset.kind]);b.addEventListener('blur',()=>caption.textContent=names[kind]);b.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();modes[1-i].focus();}});});
+ function begin(id,x,y){clearTimeout(closeTimer);drag={id,startX:x,startY:y,x:position.x,y:position.y,active:false};}
+ function move(id,x,y){if(!drag||drag.id!==id)return;const dx=x-drag.startX,dy=y-drag.startY;if(!drag.active&&Math.hypot(dx,dy)<5)return;drag.active=true;moved=true;setOpen(false);sound.classList.add('is-dragging');place(drag.x+dx,drag.y+dy);}
+ function end(id){if(!drag||drag.id!==id)return;const active=drag.active;drag=null;sound.classList.remove('is-dragging');if(typeof id==='number'&&disc.hasPointerCapture(id))disc.releasePointerCapture(id);if(active){skipClickUntil=performance.now()+350;close();}}
+ disc.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse'||e.button!==0||!e.isPrimary)return;begin(e.pointerId,e.clientX,e.clientY);disc.setPointerCapture(e.pointerId);});
+ disc.addEventListener('pointermove',e=>move(e.pointerId,e.clientX,e.clientY));
+ disc.addEventListener('pointerup',e=>end(e.pointerId));disc.addEventListener('pointercancel',e=>end(e.pointerId));
+ disc.addEventListener('lostpointercapture',()=>{if(drag){drag=null;sound.classList.remove('is-dragging');close();}});
+ disc.addEventListener('mousedown',e=>{if(e.button!==0)return;e.preventDefault();begin('mouse',e.clientX,e.clientY);});
+ document.addEventListener('mousemove',e=>{if(drag?.id==='mouse'){if(!(e.buttons&1)){end('mouse');return;}move('mouse',e.clientX,e.clientY);}});
+ document.addEventListener('mouseup',()=>end('mouse'));window.addEventListener('blur',()=>{if(drag)end(drag.id);close();});
+ disc.addEventListener('keydown',e=>{const step=e.shiftKey?36:12,moves={ArrowLeft:[-step,0],ArrowRight:[step,0],ArrowUp:[0,-step],ArrowDown:[0,step]};if(e.key==='Home'){e.preventDefault();moved=false;const p=home();place(p.x,p.y);}else if(moves[e.key]){e.preventDefault();moved=true;place(position.x+moves[e.key][0],position.y+moves[e.key][1]);}});
+ sound.addEventListener('keydown',e=>{if(e.key==='Escape'){e.preventDefault();e.stopPropagation();disc.focus({preventScroll:true});close();}else if(e.key!=='Enter'&&e.key!==' '){keyNavigation=true;keyboard=true;sync();}});
+ document.addEventListener('keydown',e=>{if(e.key==='Tab')keyNavigation=true;},true);
+ document.addEventListener('pointerdown',e=>{keyNavigation=false;keyboard=false;if(!sound.contains(e.target))close();},true);
+ root.addEventListener('rye-viewchange',e=>{close();if(e.detail==='section'){saved={position:{...position},moved};place(stage.clientWidth-68,24);}else if(saved){moved=saved.moved;place(saved.position.x,saved.position.y);saved=null;}});
+ new ResizeObserver(()=>{if(root.clientWidth<1)return;if(root.dataset.view==='section')place(stage.clientWidth-68,24);else if(moved)place(position.x,position.y);else{const p=home();place(p.x,p.y);}}).observe(stage);
+})();
+</script>
+</body>
+</html>

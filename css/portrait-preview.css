@@ -1,0 +1,40 @@
+/* Local portrait trial on the latest game-menu design. */
+html { background: #f8cc38; }
+body { margin: 0; }
+.rye-concept { max-width: 1440px; margin-inline: auto; min-height: 100svh; }
+#rye-motion.rye-concept { --rye-blue: #183dcb; }
+
+/* The supplied PNG already includes the frame; keep its full transparent canvas. */
+#rye-motion .rye-avatar-art.rye-portrait {
+  left: 2%;
+  top: 112px;
+  width: 42%;
+  max-width: 530px;
+  transform: rotate(-3deg);
+}
+#rye-motion .rye-portrait-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  user-select: none;
+}
+#rye-motion .rye-portrait .rye-avatar-stamp {
+  right: 8%;
+  bottom: -10px;
+  transform: rotate(3deg);
+}
+
+@container (max-width: 540px) {
+  #rye-motion .rye-avatar-art.rye-portrait {
+    top: 8px;
+    left: 14%;
+    width: 72%;
+    max-width: 270px;
+  }
+  #rye-motion .rye-portrait .rye-avatar-stamp {
+    bottom: -4px;
+    right: 4%;
+  }
+  #rye-motion .rye-menu-view { padding-top: 310px; }
+}

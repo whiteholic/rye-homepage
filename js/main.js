@@ -75,10 +75,10 @@
   }
 
   function readRoute() {
-    var parts = (location.hash.slice(1) || "about").split("/");
+    var parts = (location.hash.slice(1) || "menu").split("/");
     if (parts[0] === "stories") return { panel: "about", target: document.getElementById("stories"), key: "stories" };
     var panel = panels.find(function (item) { return item.id === parts[0]; });
-    if (!panel) return { panel: "about", target: null, key: "about" };
+    if (!panel) return { panel: "menu", target: null, key: "menu" };
     if (panel.id !== "action") return { panel: panel.id, target: null, key: panel.id };
     var topic = articles.find(function (item) { return item.id === parts[1]; });
     var target = null;
@@ -145,6 +145,8 @@
     document.documentElement.classList.toggle("is-reading", reading);
     action.classList.toggle("is-reading-topic", reading);
     directory.hidden = reading;
+    directory.parentElement.hidden = reading;
+    action.querySelector(".action-menu-return").hidden = reading;
     actionHeading.hidden = reading;
     toolbar.hidden = !reading;
     reader.hidden = !reading;
@@ -159,6 +161,8 @@
       action.setAttribute("aria-labelledby", route.topic.querySelector("h2").id);
       returnLink.hidden = !entry.returnTo;
       returnLink.href = "#" + (entry.returnTo ? entry.returnTo.route : "action");
+      var sourceRoute = entry.returnTo && entry.returnTo.route;
+      returnLink.querySelector("[data-return-label]").textContent = sourceRoute === "action" ? "返回主题目录" : sourceRoute === "about" || sourceRoute === "stories" ? "返回自我介绍" : sourceRoute && sourceRoute.indexOf("action/") === 0 ? "返回上一篇" : "返回主菜单";
       related.replaceChildren();
       var all = document.createElement("a");
       all.href = "#action";
@@ -190,6 +194,7 @@
     entry.scroll = window.scrollY;
     writeState(entry, "#" + route.key);
     updateChapter();
+    document.dispatchEvent(new CustomEvent("rye:navigate", { detail: { panel: route.panel, key: route.key, reading: reading, restore: restore } }));
   }
 
   function navigate(destination, link) {
@@ -257,4 +262,29 @@
 
   var initial = existing && existing.session === session ? existing : { session: session, documentPath: documentPath, index: 0, returnTo: null, homeSource: null };
   activate(initial, Boolean(existing && existing.session === session), false);
+})();
+
+// Category selection stays local to the interest page and leaves reading history untouched.
+(function () {
+  "use strict";
+  var controls = document.querySelector(".interest-categories");
+  if (!controls) return;
+  var buttons = Array.from(controls.querySelectorAll("[data-interest-category]"));
+  var collections = buttons.map(function (button) {
+    return document.getElementById(button.dataset.interestCategory);
+  });
+  if (!buttons.length || collections.some(function (collection) { return !collection; })) return;
+
+  function selectCategory(selected) {
+    buttons.forEach(function (button, index) {
+      var active = button === selected;
+      button.setAttribute("aria-pressed", String(active));
+      collections[index].hidden = !active;
+    });
+  }
+  buttons.forEach(function (button) {
+    button.addEventListener("click", function () { selectCategory(button); });
+  });
+  selectCategory(buttons[0]);
+  controls.hidden = false;
 })();
