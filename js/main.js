@@ -19,6 +19,7 @@
   var activeRoute;
   var scrollFrame = 0;
   var stateTimer = 0;
+  var navigationSerial = 0;
   var stateKey = "ryeReading";
   var documentPath = location.pathname;
   var existing = history.state && history.state[stateKey];
@@ -127,6 +128,7 @@
   }
 
   function activate(entry, restore, focus) {
+    navigationSerial += 1;
     clearTimeout(stateTimer);
     activeEntry = entry;
     activeRoute = readRoute();
@@ -198,17 +200,27 @@
   }
 
   function navigate(destination, link) {
-    savePosition(link.id);
-    var source = sourcePosition();
-    var oldRoute = activeRoute;
-    var entry = {
-      session: session, documentPath: documentPath, index: activeEntry.index + 1,
-      returnTo: source, homeSource: oldRoute.panel === "about" ? source : activeEntry.homeSource
-    };
-    history.pushState({ ryeReading: entry }, "", destination);
-    var nextRoute = readRoute();
-    if (oldRoute.topic && nextRoute.topic === oldRoute.topic) entry.returnTo = activeEntry.returnTo;
-    activate(entry, false, true);
+    var ticket = ++navigationSerial;
+    function commit() {
+      if (ticket !== navigationSerial) return;
+      savePosition(link.id);
+      var source = sourcePosition();
+      var oldRoute = activeRoute;
+      var entry = {
+        session: session, documentPath: documentPath, index: activeEntry.index + 1,
+        returnTo: source, homeSource: oldRoute.panel === "about" ? source : activeEntry.homeSource
+      };
+      history.pushState({ ryeReading: entry }, "", destination);
+      var nextRoute = readRoute();
+      if (oldRoute.topic && nextRoute.topic === oldRoute.topic) entry.returnTo = activeEntry.returnTo;
+      activate(entry, false, true);
+    }
+    // The visual layer may cover the old panel before committing this route.
+    // History/restoration still belongs to this router; newer navigation wins.
+    var transition = new CustomEvent("rye:before-navigate", { cancelable: true, detail: {
+      destination: destination, from: activeRoute.panel, reading: Boolean(activeRoute.topic), commit: commit
+    } });
+    if (document.dispatchEvent(transition)) commit();
   }
 
   function returnTo(source) {

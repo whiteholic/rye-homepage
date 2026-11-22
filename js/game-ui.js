@@ -5,12 +5,14 @@
   var motionWanted = true;
   var running = [];
   var previousPanel = location.hash.slice(1).split("/")[0] || "menu";
-  var previousReading = previousPanel === "action" && location.hash.split("/").length > 1;
   var burst = document.querySelector(".menu-burst");
   var wipe = document.querySelector(".scene-transition");
   var confirmation = null;
+  var sceneChange = null;
+  var committingScene = false;
   function motionEnabled() { return motionWanted && !reduced.matches; }
   function cancelAnimations() {
+    sceneChange = null;
     running.forEach(function (animation) { animation.cancel(); });
     running = [];
     burst.hidden = true;
@@ -19,6 +21,8 @@
   function animate(element, frames, options) {
     var animation = element.animate(frames, options);
     running.push(animation);
+    function release() { running = running.filter(function (item) { return item !== animation; }); }
+    animation.finished.then(release, release);
     return animation;
   }
   function syncMotion() {
@@ -26,13 +30,31 @@
     document.documentElement.classList.toggle("motion-off", !enabled);
     motionButton.setAttribute("aria-pressed", String(enabled));
     motionButton.textContent = enabled ? "动效 ON" : "动效 OFF";
-    if (!enabled) cancelAnimations();
+    if (replay) replay.disabled = !enabled;
+    if (!enabled) {
+      var pending = sceneChange;
+      cancelAnimations();
+      if (pending && !pending.committed) pending.commit();
+    }
   }
   motionButton.addEventListener("click", function () { motionWanted = !motionEnabled(); syncMotion(); });
   reduced.addEventListener("change", syncMotion);
   syncMotion();
   var menu = document.getElementById("menu");
   var choices = Array.from(menu.querySelectorAll(".main-choices a"));
+  var replay = document.createElement("button");
+  replay.type = "button";
+  replay.className = "menu-replay";
+  replay.textContent = "↻ 重播入场";
+  replay.hidden = !menu.classList.contains("is-active");
+  replay.disabled = !motionEnabled();
+  document.querySelector(".site-footer").appendChild(replay);
+  replay.addEventListener("click", function () {
+    menu.scrollIntoView({ block: "start", behavior: "instant" });
+    menu.querySelector("h1").focus({ preventScroll: true });
+    cancelAnimations();
+    homeEntrance();
+  });
   function selectChoice(selected) {
     menu.dataset.selection = String(choices.indexOf(selected));
     choices.forEach(function (choice) { choice.classList.toggle("is-current", choice === selected); });
@@ -59,25 +81,27 @@
     var rect = choice.getBoundingClientRect();
     confirmation = { x: rect.left + rect.width * .77, y: rect.top + rect.height / 2 };
   }, true);
-  function entrance(elements, duration) {
-    cancelAnimations();
+  function entrance(elements, duration, covered) {
+    if (!covered) cancelAnimations();
     if (!motionEnabled()) return;
     elements.forEach(function (element, index) {
       if (!element) return;
-      running.push(element.animate([
-        { opacity: .25, transform: "translate(" + (index % 2 ? "18px" : "-18px") + ", 7px)", clipPath: "polygon(0 0, 88% 0, 100% 100%, 0 100%)" },
-        { opacity: 1, transform: "translate(0, 0)", clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" }
-      ], { duration: duration, delay: index * 35, easing: "cubic-bezier(.2,.75,.25,1)" }));
+      animate(element, [
+        { translate: (index % 2 ? "10px" : "-10px") + " 4px" },
+        { translate: "0 0" }
+      ], { duration: duration, delay: index * 25, easing: "cubic-bezier(.2,.75,.25,1)", fill: "backwards" });
     });
   }
   function homeEntrance() {
     if (!motionEnabled()) return;
     var layers = [menu.querySelector(".menu-word"), menu.querySelector(".menu-portrait"), menu.querySelector(".menu-content .eyebrow"), menu.querySelector("h1")].concat(choices, [menu.querySelector(".menu-foot")]);
     layers.forEach(function (element, index) {
+      var isPortrait = index === 1;
+      var isChoice = index >= 4 && index < 4 + choices.length;
       animate(element, [
-        { opacity: 0, translate: index === 1 ? "-55px 20px" : index === 0 ? "75px -25px" : "38px 0" },
-        { opacity: 1, translate: "0 0" }
-      ], { duration: index < 2 ? 650 : 380, delay: index * 45, easing: "cubic-bezier(.16,.8,.2,1)", fill: "backwards" });
+        { opacity: 0, translate: isPortrait ? "-55px 20px" : index === 0 ? "100px -35px" : isChoice ? "90px 0" : "40px 12px", rotate: isPortrait ? "-7deg" : "0deg" },
+        { opacity: index === 0 ? .8 : 1, translate: "0 0", rotate: "0deg" }
+      ], { duration: isPortrait ? 800 : index === 0 ? 750 : 550, delay: isChoice ? 120 + (index - 4) * 60 : index < 2 ? 0 : 60, easing: "cubic-bezier(.16,.8,.2,1)", fill: "backwards" });
     });
   }
   function confirmMenu(point) {
@@ -85,47 +109,75 @@
     burst.style.top = Math.max(36, Math.min(point.y, window.innerHeight - 36)) + "px";
     burst.hidden = false;
     var effect = animate(burst, [
-      { opacity: 1, transform: "translate(-50%,-50%) scale(.15) rotate(-30deg)" },
-      { opacity: .9, offset: .7 },
-      { opacity: 0, transform: "translate(-50%,-50%) scale(1.8) rotate(60deg)" }
-    ], { duration: 480, easing: "ease-out" });
+      { opacity: .6, transform: "translate(-50%,-50%) scale(.2) rotate(-30deg)" },
+      { opacity: 0, transform: "translate(-50%,-50%) scale(.8) rotate(30deg)" }
+    ], { duration: 240, easing: "ease-out" });
     effect.finished.then(function () { burst.hidden = true; }, function () {});
   }
-  function cutTransition(panel, returning) {
+  function cutTransition(panel, returning, commit) {
+    var change = { commit: commit, committed: false };
+    sceneChange = change;
     wipe.classList.toggle("is-returning", returning);
     wipe.hidden = false;
     var label = wipe.querySelector("span");
     label.textContent = returning ? "返回主菜单" : panel.querySelector("h1").textContent;
-    Array.from(wipe.querySelectorAll("i")).forEach(function (layer, index) {
-      animate(layer, [
-        { transform: "translateX(-140%) skewX(-18deg)" },
-        { transform: "translateX(0) skewX(-18deg)", offset: .43 },
-        { transform: "translateX(0) skewX(-18deg)", offset: .55 },
-        { transform: "translateX(140%) skewX(-18deg)" }
-      ], { duration: 300, delay: index * 40, easing: "cubic-bezier(.65,0,.25,1)", fill: "backwards" });
-    });
-    var effect = animate(label, [
-      { opacity: 0, translate: "-45px 0" },
-      { opacity: 1, translate: "0 0", offset: .32 },
-      { opacity: 1, translate: "0 0", offset: .62 },
-      { opacity: 0, translate: "70px 0" }
-    ], { duration: 380 });
-    effect.finished.then(function () { wipe.hidden = true; }, function () {});
+    var full = returning ? "polygon(124% 0, 0 0, -24% 100%, 100% 100%)" : "polygon(-24% 0, 100% 0, 124% 100%, 0 100%)";
+    var start = returning ? "polygon(124% 0, 124% 0, 100% 100%, 100% 100%)" : "polygon(-24% 0, -24% 0, 0 100%, 0 100%)";
+    var end = returning ? "polygon(0 0, 0 0, -24% 100%, -24% 100%)" : "polygon(100% 0, 100% 0, 124% 100%, 124% 100%)";
+    var cover = animate(wipe, [
+      { clipPath: start },
+      { clipPath: full }
+    ], { duration: 240, easing: "cubic-bezier(.4,0,.2,1)", fill: "forwards" });
+    animate(label, [
+      { opacity: 0, translate: "-18px 0" },
+      { opacity: 1, translate: "0 0", offset: .4 },
+      { opacity: 1, translate: "0 0", offset: .6 },
+      { opacity: 0, translate: "18px 0" }
+    ], { duration: 620 });
+    cover.finished.then(function () {
+      if (sceneChange !== change) return;
+      change.committed = true;
+      committingScene = true;
+      try { commit(); } finally { committingScene = false; }
+      // All colour bands move as one surface. Only swap panels once covered.
+      var reveal = animate(wipe, [
+        { clipPath: full },
+        { clipPath: end }
+      ], { duration: 320, delay: 60, easing: "cubic-bezier(.4,0,.2,1)", fill: "both" });
+      cover.cancel();
+      reveal.finished.then(function () {
+        if (sceneChange !== change) return;
+        sceneChange = null;
+        wipe.hidden = true;
+        reveal.cancel();
+      }, function () {});
+    }, function () {});
   }
-  document.addEventListener("rye:navigate", function (event) {
+  document.addEventListener("rye:before-navigate", function (event) {
     var detail = event.detail;
+    var parts = detail.destination.slice(1).split("/");
+    var panelId = parts[0] === "stories" ? "about" : parts[0];
+    var panel = document.getElementById(panelId);
+    if (!motionEnabled() || !panel || panelId === detail.from || detail.reading || parts.length > 1) return;
+    event.preventDefault();
     var point = confirmation;
     confirmation = null;
     cancelAnimations();
+    cutTransition(panel, panelId === "menu", detail.commit);
+    if (point) confirmMenu(point);
+  });
+  document.addEventListener("rye:navigate", function (event) {
+    var detail = event.detail;
+    confirmation = null;
+    var covered = Boolean(sceneChange && committingScene);
+    if (!covered) cancelAnimations();
+    replay.hidden = detail.panel !== "menu";
     if (detail.panel !== previousPanel && !detail.restore && !detail.reading) {
       var panel = document.getElementById(detail.panel);
-      if (detail.panel === "menu") homeEntrance();
-      else entrance([panel.querySelector(".page-heading"), panel.querySelector(".home-stories, .topic-stage, .interest-categories, .empty-note, .music-categories")], 345);
-      if (motionEnabled() && !previousReading) cutTransition(panel, detail.panel === "menu");
-      if (motionEnabled() && point) confirmMenu(point);
+      if (detail.panel === "menu") entrance([menu.querySelector(".menu-content"), menu.querySelector(".menu-portrait")], 360, covered);
+      else entrance([panel.querySelector(".page-heading"), panel.querySelector(".home-stories, .topic-stage, .interest-categories, .empty-note, .music-categories")], 360, covered);
     }
     previousPanel = detail.panel;
-    previousReading = detail.reading;
   });
   if (menu.classList.contains("is-active")) homeEntrance();
   var preview = document.querySelector(".topic-preview");
@@ -149,9 +201,7 @@
   var sound = document.querySelector(".sound-widget");
   var disc = sound.querySelector(".sound-disc");
   var options = sound.querySelector(".sound-options");
-  var caption = sound.querySelector(".sound-caption strong");
   var modes = Array.from(sound.querySelectorAll("[data-sound-kind]"));
-  var names = { vocal: "有人声的音乐", instrumental: "纯音乐" };
   var kind = "vocal";
   var position = { x: window.innerWidth - 72, y: window.innerHeight - 76 };
   var drag = null;
@@ -169,11 +219,13 @@
   function close() { clearTimeout(closeTimer); hover = false; keyboard = false; latched = false; setOpen(false); }
   function syncOpen() { setOpen(!drag && (hover || keyboard || latched)); }
   function place(x, y) {
-    position.x = Math.max(12, Math.min(x, window.innerWidth - 60));
+    var viewportWidth = document.documentElement.clientWidth;
+    position.x = Math.max(12, Math.min(x, viewportWidth - 60));
     position.y = Math.max(12, Math.min(y, window.innerHeight - 60));
     sound.style.left = position.x + "px";
     sound.style.top = position.y + "px";
-    var optionX = Math.max(12, Math.min(position.x + 24 - 113, window.innerWidth - 238));
+    var width = options.offsetWidth || 176;
+    var optionX = Math.max(12, Math.min(position.x + 24 - width / 2, viewportWidth - width - 12));
     options.style.left = (optionX - position.x) + "px";
     options.style.right = "auto";
     if (!options.hidden) {
@@ -206,13 +258,8 @@
     button.addEventListener("click", function () {
       kind = button.dataset.soundKind;
       sound.dataset.kind = kind;
-      caption.textContent = names[kind];
       modes.forEach(function (item) { item.setAttribute("aria-pressed", String(item === button)); });
     });
-    button.addEventListener("pointerenter", function () { caption.textContent = names[button.dataset.soundKind]; });
-    button.addEventListener("pointerleave", function () { caption.textContent = names[kind]; });
-    button.addEventListener("focus", function () { caption.textContent = names[button.dataset.soundKind]; });
-    button.addEventListener("blur", function () { caption.textContent = names[kind]; });
   });
   function begin(id, x, y) { clearTimeout(closeTimer); drag = { id: id, x: x, y: y, startX: position.x, startY: position.y, active: false }; }
   function move(id, x, y) {
